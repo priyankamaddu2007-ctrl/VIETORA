@@ -1,113 +1,112 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>VIETORA | VIET Autonomous Official Student Portal</title>
+<title>VIETORA | VIET Autonomous Official Portal</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#060c24;color:#e2e8f0;scroll-behavior:smooth}
 h1,h2{font-family:'Space Grotesk',sans-serif}
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(6,12,36,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 5%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:800;font-size:18px;letter-spacing:0.5px}
-.logo span{color:#60a5fa}
-.hero{padding:110px 5% 50px;min-height:100vh;background:radial-gradient(700px 400px at 20% 30%,rgba(37,99,235,0.35),transparent),linear-gradient(180deg,#060c24 0%,#0a1942 100%);display:grid;grid-template-columns:1.15fr 0.85fr;gap:30px;align-items:center}
-.hero h1{font-size:58px;line-height:0.92;font-weight:800}
-.hero h1 .blue{background:linear-gradient(90deg,#93c5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(6,12,36,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:18px}.logo span{color:#60a5fa}
+.hero{padding:110px 5% 50px;min-height:90vh;background:radial-gradient(700px 400px at 20% 30%,rgba(37,99,235,0.35),transparent),linear-gradient(180deg,#060c24 0%,#0a1942 100%);display:grid;grid-template-columns:1.15fr 0.85fr;gap:30px;align-items:center}
+.hero h1{font-size:54px;line-height:0.92;font-weight:800}.hero h1.blue{background:linear-gradient(90deg,#93c5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{color:#94a3b8;font-size:13px;margin-top:16px;line-height:1.7;max-width:500px}
-.side-card{background:linear-gradient(135deg,rgba(37,99,235,0.18),rgba(255,255,255,0.04));border:1px solid rgba(96,165,250,0.25);border-radius:22px;padding:18px;margin-bottom:14px;cursor:pointer;transition:0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.3)}
-.side-card:hover{transform:translateX(-5px) scale(1.02);border-color:#60a5fa;box-shadow:0 12px 35px rgba(37,99,235,0.3)}
-.side-card .tag{font-size:9px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;background:rgba(96,165,250,0.2);color:#93c5fd}
-.side-card h3{font-size:20px;color:white}
-.side-card p{font-size:11px;color:#94a3b8;margin-top:2px}
-.section{padding:70px 5%}
-.section h2{text-align:center;font-size:34px}
-.section .sub{text-align:center;color:#64748b;font-size:13px;margin:8px 0 40px}
+.side-card{background:linear-gradient(135deg,rgba(37,99,235,0.18),rgba(255,255,255,0.04));border:1px solid rgba(96,165,250,0.25);border-radius:22px;padding:18px;margin-bottom:14px;cursor:pointer}
+.side-card h3{font-size:19px;color:white}.side-card p{font-size:11px;color:#94a3b8}
+.section{padding:65px 5%}.section h2{text-align:center;font-size:32px}.sub{text-align:center;color:#64748b;font-size:12.5px;margin:8px 0 35px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px}
-/* BLUE BOX - HIGHLIGHTED AND ROUNDED */
-.blue-box{background:linear-gradient(135deg,rgba(37,99,235,0.25) 0%,rgba(59,130,246,0.15) 50%,rgba(255,255,255,0.05) 100%);border:1.5px solid rgba(96,165,250,0.35);border-radius:22px;padding:22px;cursor:pointer;transition:0.4s;box-shadow:0 10px 30px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.1);backdrop-filter:blur(12px)}
-.blue-box:hover{transform:translateY(-6px) scale(1.02);border-color:#60a5fa;box-shadow:0 20px 45px rgba(37,99,235,0.4),inset 0 1px 0 rgba(255,255,255,0.15);background:linear-gradient(135deg,rgba(37,99,235,0.35),rgba(59,130,246,0.22),rgba(255,255,255,0.07))}
-.blue-box .badge{font-size:9px;font-weight:800;padding:5px 12px;border-radius:20px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,0.12);color:#93c5fd;border:1px solid rgba(96,165,250,0.3)}
-.blue-box h3{font-size:16px;color:white;margin-bottom:6px;line-height:1.3}
-.blue-box p{font-size:12.5px;color:#cbd5e1;line-height:1.6}
-.blue-box .click{margin-top:12px;font-size:10.5px;color:#60a5fa;font-weight:700;letter-spacing:0.5px}
-/* MODAL */
-.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(2,6,23,0.92);backdrop-filter:blur(24px);z-index:5000;display:none;align-items:center;justify-content:center;padding:15px}
+.blue-box{background:linear-gradient(135deg,rgba(37,99,235,0.22),rgba(59,130,246,0.12),rgba(255,255,255,0.04));border:1.5px solid rgba(96,165,250,0.35);border-radius:22px;padding:22px;cursor:pointer;transition:0.35s;box-shadow:0 8px 28px rgba(0,0,0,0.35)}
+.blue-box:hover{transform:translateY(-5px);border-color:#60a5fa;box-shadow:0 18px 40px rgba(37,99,235,0.35)}
+.blue-box.badge{font-size:9px;font-weight:800;padding:5px 12px;border-radius:20px;display:inline-block;margin-bottom:10px;background:rgba(255,255,255,0.1);color:#93c5fd;border:1px solid rgba(96,165,250,0.25)}
+.blue-box h3{font-size:15.5px;color:white;margin-bottom:6px;line-height:1.35}
+.blue-box p{font-size:12px;color:#cbd5e1;line-height:1.6}
+.blue-box.click{margin-top:12px;font-size:10px;color:#60a5fa;font-weight:700;letter-spacing:0.5px}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(2,6,23,0.93);backdrop-filter:blur(22px);z-index:5000;display:none;align-items:center;justify-content:center;padding:12px}
 .modal.active{display:flex}
-.box{background:#0f172a;border:1.5px solid rgba(96,165,250,0.3);border-radius:24px;max-width:780px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,0.7)}
+.box{background:#0f172a;border:1.5px solid rgba(96,165,250,0.3);border-radius:24px;max-width:750px;width:100%;max-height:92vh;overflow-y:auto}
 .box-top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;background:#0f172a;z-index:10}
 .box-top button{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);color:white;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:12px}
 .box-content{padding:22px}
-.box-content img{width:100%;height:240px;object-fit:cover;border-radius:16px;margin-bottom:14px;border:1px solid rgba(255,255,255,0.08)}
-.box-content iframe{width:100%;height:260px;border-radius:16px;border:none;margin:14px 0}
-.box-content h2{font-size:22px;color:white;margin-bottom:8px}
-.box-content h4{font-size:13px;color:#60a5fa;margin:18px 0 6px;font-weight:700}
+.photo-box{width:100%;height:200px;background:linear-gradient(135deg,#1e293b,#0f172a);border:1.5px dashed rgba(96,165,250,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:14px;color:#64748b;font-size:12px;text-align:center;padding:15px}
+.photo-box b{color:#93c5fd;font-size:13px;margin-bottom:4px}
+.box-content h2{font-size:20px;color:white;margin-bottom:8px}
+.box-content h4{font-size:12.5px;color:#60a5fa;margin:16px 0 6px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
 .box-content p{font-size:13px;color:#94a3b8;line-height:1.7}
 .box-content ul{margin:8px 0 0 18px;color:#cbd5e1;font-size:13px;line-height:1.9}
-footer{padding:30px 5%;text-align:center;border-top:1px solid rgba(255,255,255,0.06);color:#475569;font-size:11px;line-height:1.7}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:38px}}
+footer{padding:28px 5%;text-align:center;border-top:1px solid rgba(255,255,255,0.06);color:#475569;font-size:10.5px;line-height:1.7}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:36px}}
 </style>
 </head>
 <body>
-<header><div class="logo">VIET<span>ORA</span> - OFFICIAL STUDENT PORTAL</div><div style="font-size:11px;color:#60a5fa;font-weight:700">EST. 2008 • AUTONOMOUS • NAAC A • AICTE 2026</div></header>
+<header><div class="logo">VIET<span>ORA</span></div><div style="font-size:11px;color:#60a5fa;font-weight:700">OFFICIAL PORTAL • AUTONOMOUS • EST. 2008 • 20 ACRES NARAVA</div></header>
 
 <section class="hero">
 <div>
-<div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:inline-block;padding:6px 14px;border-radius:20px;font-size:10px;color:#93c5fd;font-weight:700;margin-bottom:18px">AUTONOMOUS • JNTU-GV • 20 ACRES NARAVA • OFFICIAL - viet.edu.in</div>
+<div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:inline-block;padding:6px 14px;border-radius:20px;font-size:10px;color:#93c5fd;font-weight:700;margin-bottom:16px">JNTU-GV • NAAC A • AICTE APPROVED • OFFICIAL - viet.edu.in • 2026</div>
 <h1>Where<br>Aspirations<br><span class="blue">Take Flight</span></h1>
-<p><b>VIETORA is the reimagined digital campus of Visakha Institute of Engineering and Technology (Autonomous).</b> Officially verified from viet.edu.in and AICTE 2026 Approval. NAAC A Grade, ISO Certified, JNTU-GV Affiliated.</p>
-<div style="display:flex;gap:12px;margin-top:22px"><button style="background:white;color:#0f172a;padding:12px 22px;border-radius:30px;font-weight:700;font-size:13px;border:none;cursor:pointer" onclick="document.getElementById('placements').scrollIntoView({behavior:'smooth'})">View Last Year Placements →</button><button style="background:rgba(255,255,255,0.1);color:white;padding:12px 22px;border-radius:30px;font-size:13px;border:1px solid rgba(255,255,255,0.15);cursor:pointer" onclick="document.getElementById('campus').scrollIntoView({behavior:'smooth'})">Explore Campus</button></div>
+<p><b>VIETORA is the reimagined digital campus of Visakha Institute of Engineering and Technology (Autonomous).</b> Verified from official website viet.edu.in and AICTE 2026. 20 acres green campus at Narava, Visakhapatnam.</p>
 </div>
 <div>
-<div class="side-card" onclick="openDetail('aura')"><div class="tag">AURA FEST • 2026 • CENTRAL QUAD</div><h3>AURA FEST</h3><p>Arts, Culture & Music Festival - Click to view photos and videos</p></div>
-<div class="side-card" onclick="openDetail('code')"><div class="tag">CODE CARNIVAL • CSE DEPT • 48HR • 2026</div><h3>CODE CARNIVAL</h3><p>Build. Innovate. Compete. Win - Click to view photos and videos</p></div>
-<div class="side-card" onclick="openDetail('campus360')"><div class="tag">CAMPUS 360° • PONGAL FESTIVAL • 2026</div><h3>CAMPUS 360°</h3><p>Pongal Festival • Freshers • Sports Day • Hostel • Click to view</p></div>
+<div class="side-card" onclick="openDetail('aura')"><div style="font-size:9px;background:rgba(96,165,250,0.2);color:#93c5fd;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;font-weight:700">AURA FEST • 2026 • CENTRAL QUAD</div><h3>AURA FEST</h3><p>Arts, Culture & Music Festival - Click to view details</p></div>
+<div class="side-card" onclick="openDetail('code')"><div style="font-size:9px;background:rgba(96,165,250,0.2);color:#93c5fd;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;font-weight:700">CODE CARNIVAL • CSE DEPT • 48HR • 2026</div><h3>CODE CARNIVAL</h3><p>Build. Innovate. Compete. Win - Click to view details</p></div>
+<div class="side-card" onclick="openDetail('campus360')"><div style="font-size:9px;background:rgba(16,185,129,0.18);color:#6ee7b7;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;font-weight:700">CAMPUS 360° • PONGAL FESTIVAL • 2026</div><h3>CAMPUS 360°</h3><p>Pongal Festival • Freshers • Sports Day • Hostel • Click to view</p></div>
 </div>
 </section>
 
 <div class="section" id="campus" style="background:#080e26">
-<h2>Campus 360° - Life at Narava - Official 2026</h2><div class="sub">All blue boxes are highlighted and rounded - Click to view related photos and videos</div>
+<h2>Campus 360° - Life at Narava - Official 2026</h2><div class="sub">All blue boxes are rounded and highlighted - Click to view what actually exists in VIET for that facility - No fake photos</div>
 <div class="grid">
-<div class="blue-box" onclick="openDetail('hostel')"><div class="badge">HOSTEL - OFFICIAL 2026 - CLICK TO VIEW</div><h3>Boys and Girls Hostel - Fees Rs.35,000 per year with Food - 2026</h3><p>Separate hostels inside 20 acre autonomous campus at Narava. Free 155 Mbps WiFi, 24/7 security with CCTV and warden, doctor on call. Click to view hostel rooms, mess hall photos and hostel tour video.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('canteen')"><div class="badge">2 CANTEENS + CAFETERIA - OFFICIAL 2026</div><h3>Cafeteria and Food Courts - Official Canteen - 2026</h3><p>Two spacious canteens and cafeteria with 200+ seating. Hygienic veg and non-veg, snacks, juices, bakery. Morning 7:30 AM to evening 6 PM. Click to view canteen interior, food menu photos and canteen video.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('library')"><div class="badge">LIBRARY 16,970 BOOKS - OFFICIAL 2026</div><h3>Central and Digital Library - Autonomous - 2026</h3><p>Air conditioned library with 16,970 books, 2680 titles, 28 national journals, e-journals, DELNET, NPTEL videos. Digital library with 30 computers, reading room capacity 300. Open 8 AM to 8 PM. Click to view library photos and video.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('sports')"><div class="badge">SPORTS AND GYM - OFFICIAL 2026</div><h3>Sports Complex and Gym - Official - 2026</h3><p>Cricket ground, football field, basketball court, volleyball, kabaddi, shuttle badminton, chess, carrom, table tennis. Gym with professional trainers morning 6-9 AM and evening 4-7 PM. Annual Sports Day 2026. Click to view sports ground photos and video.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('auditorium')"><div class="badge">AUDITORIUM 264 SEATS - OFFICIAL 2026</div><h3>Auditorium and Seminar Halls - Official - 2026</h3><p>264 AC seating auditorium with 17000W sound system, projector, stage lighting, green room. For AURA FEST, CODE CARNIVAL, Pongal Festival, Freshers Party 2026. Click to view auditorium photos and event videos.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('labs')"><div class="badge">LABS AND TRANSPORT - OFFICIAL 2026</div><h3>Advanced Labs and College Buses - Official - 2026</h3><p>CSE labs with 300+ PCs, AI and ML lab, Data Science lab, ECE, EEE, Mechanical workshops, Civil labs. Fleet of college buses covering entire Vizag city. Medical centre, parking, ATM. Click to view lab photos and bus route video.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS</div></div>
+<div class="blue-box" onclick="openDetail('hostel')"><div class="badge">HOSTEL - OFFICIAL 2026 - CLICK TO VIEW REAL DETAILS</div><h3>Boys and Girls Hostel - Fees Rs.35,000 per year with Food - Official 2026</h3><p>Separate hostels for boys and girls inside 20 acre campus. Free internet facility for students, doctor and health care officer, bakery in each hostel premises. Click to view what actually exists in VIET hostel - official facilities only.</p><div class="click">→ CLICK TO VIEW REAL HOSTEL DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('canteen')"><div class="badge">CAFETERIA / CANTEEN - OFFICIAL 2026</div><h3>Cafeteria and Canteen - Official - 2026</h3><p>Cafeteria facility available in campus. Hygienic food, spacious seating. Click to view real canteen facilities that exist in VIET - official only.</p><div class="click">→ CLICK TO VIEW REAL CANTEEN DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('library')"><div class="badge">CENTRAL AND DIGITAL LIBRARY - 16,970 BOOKS - OFFICIAL 2026</div><h3>Central Library - 16,970 Books, 2680 Titles, 28 National Journals, 25 Magazines - Official 2026</h3><p>Library is air-conditioned with 16,970 books and 2680 titles. Subscription for 28 national journals and 25 magazines. Click to view real library collection that exists in VIET - official only.</p><div class="click">→ CLICK TO VIEW REAL LIBRARY DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('auditorium')"><div class="badge">AUDITORIUM - 17000W AUDIO - OFFICIAL 2026</div><h3>Auditorium - State-of-the-art - 17000W Audio System, Projector, Stage Lighting, AC - Official 2026</h3><p>College has state-of-the-art auditorium with well designed acoustics, 17000W audio system, imported multimedia projector, special stage lighting, computerised AC system. Click to view real auditorium specs.</p><div class="click">→ CLICK TO VIEW REAL AUDITORIUM DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('labs')"><div class="badge">COMPUTER LABS AND ENGINEERING LABS - OFFICIAL 2026</div><h3>Computer Block and Department Labs - Official 2026</h3><p>Computer block with internet facility for computer related work after college hours. Department labs for CSE, ECE, EEE, Mechanical, Civil. Engineering workshops. Click to view real labs that exist in VIET.</p><div class="click">→ CLICK TO VIEW REAL LABS DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('sports')"><div class="badge">SPORTS FACILITIES - OFFICIAL 2026</div><h3>Sports Facilities - Official 2026</h3><p>Sports facilities available in 20 acre campus. Playground, sports complex for cricket, football, basketball, volleyball, shuttle, kabaddi. Click to view real sports facilities that exist - No gym as per official data.</p><div class="click">→ CLICK TO VIEW REAL SPORTS DETAILS</div></div>
 </div>
 </div>
 
 <div class="section" id="placements">
-<h2>Placements - Last Year 2025 Batch Only - Official</h2><div class="sub">All blue boxes are highlighted and rounded - Click to view related photos and videos - Years correctly mentioned - 2025 Last Year Only</div>
+<h2>Placements - Official Data Only - 2024 Latest Verified</h2><div class="sub">Official placement data as per Shiksha and CollegeDunia - 2024 season - 75 companies, 253 students, 6.5 LPA highest, 2.2 LPA average - Click blue boxes to view</div>
 <div class="grid">
-<div class="blue-box" onclick="openDetail('placements')"><div class="badge">PLACEMENTS STATISTICS 2025 - LAST YEAR ONLY - OFFICIAL</div><h3>Placements Statistics 2025 - Last Year Batch - Autonomous - Official 2025</h3><p><b>Last Year 2025 Official Data:</b> Highest Package 7.2 LPA, Average Package 3.4 LPA, Total Students Placed 312 Students, Companies Visited 82 Companies, Best Branch CSE, AI and ML, Data Science, MBA. Locations Hyderabad, Bangalore, Vizag. This data is for last year 2025 batch only. No 2024 data included. Click to view placement photos, students placed photos and placement video 2025.</p><div class="click">→ CLICK TO VIEW PHOTOS & VIDEOS OF 2025 PLACEMENTS</div></div>
-<div class="blue-box" onclick="openDetail('recruiters')"><div class="badge">TOP RECRUITERS 2025 - LAST YEAR ONLY - OFFICIAL</div><h3>Top Recruiters - Last Year 2025 Batch - Official - 82 Companies</h3><p><b>Companies Visited in Last Year 2025:</b> TCS, Wipro, Infosys, Tech Mahindra, Cognizant, Accenture, Capgemini, HCL, Hexaware, IBM, Deloitte, Amazon, Flipkart, Sutherland, Mphasis, Allsec Technologies, QSpiders, Kodnest, Daikin, Apollo Tyres and 62 more companies. All companies are for 2025 batch only. Click to view recruiter logos, company visit photos and recruitment videos 2025.</p><div class="click">→ CLICK TO VIEW RECRUITER PHOTOS & VIDEOS</div></div>
-<div class="blue-box" onclick="openDetail('training')"><div class="badge">TRAINING AND CRT - 2025 BATCH - OFFICIAL</div><h3>Training and CRT Program - Last Year 2025 Batch - Official</h3><p>CRT Training, Aptitude, Reasoning, Communication Skills, Technical Workshops, Mock Interviews, Group Discussions, Resume Building, English Communication Classes, Entrepreneurship Camps, NPTEL Learning, Industrial Visits, Internships for last year 2025 batch. 100% Placement Support. Click to view training session photos and training videos 2025.</p><div class="click">→ CLICK TO VIEW TRAINING PHOTOS & VIDEOS</div></div>
+<div class="blue-box" onclick="openDetail('placements')"><div class="badge">PLACEMENTS 2024 - OFFICIAL VERIFIED - 75 COMPANIES, 253 STUDENTS</div><h3>Placements Statistics 2024 - Latest Official Data - Training and Placement Cell - Official</h3><p>2024 placement season saw 75 companies place 253 students. Highest package INR 6.5 LPA and average package INR 2.2 LPA. IT services companies form primary recruiter base. B.Tech CSE and ECE account for bulk placements, roles in software development, testing, IT support in Hyderabad and Visakhapatnam markets. Training cell supports pre-placement preparation through aptitude, communication, technical workshops. Click to view real placement details.</p><div class="click">→ CLICK TO VIEW REAL PLACEMENT DETAILS - 2024 OFFICIAL</div></div>
+
+<div class="blue-box" onclick="openDetail('recruiters')"><div class="badge">TOP RECRUITERS 2024 - OFFICIAL - 75 COMPANIES</div><h3>Top Recruiters 2024 - Official List - 75 Companies - Official</h3><p>Top recruiters 2024: Allsec Technologies, Hexaware, Kodnest Technologies, Daikin, KIML, Tech Mahindra, Wipro, Q Spiders, Apollo Tyres, Infosys, TCS, Tech Mahindra and 64 more. IT services companies primary recruiter base. Click to view real recruiters list from official portals.</p><div class="click">→ CLICK TO VIEW REAL RECRUITERS - 2024 OFFICIAL</div></div>
+
+<div class="blue-box" onclick="openDetail('training')"><div class="badge">TRAINING AND PLACEMENT CELL - OFFICIAL 2024</div><h3>Training and Placement Cell - Aptitude, Communication, Technical Workshops - Official</h3><p>Training and Placement Cell coordinates campus recruitment for B.Tech and MBA. Guides students about career options, advanced training for competition, maintains relationships with reputed firms and recruiting companies. Training: aptitude, communication, technical skills workshops for final-year students. Click to view real training details.</p><div class="click">→ CLICK TO VIEW REAL TRAINING DETAILS</div></div>
 </div>
 </div>
 
-<div class="section" id="videos" style="background:#080e26">
-<h2>Official VIET Autonomous Videos - Campus Life - 2026</h2><div class="sub">Real campus life from VIET Official YouTube - AURA FEST 2026, CODE CARNIVAL 2026, Campus Tour</div>
+<div class="section" id="events" style="background:#080e26">
+<h2>Events 2026 - AURA FEST, CODE CARNIVAL, Pongal Festival - Official</h2><div class="sub">Click blue boxes to view real events that happen in VIET</div>
 <div class="grid">
-<div class="blue-box"><div class="badge">CAMPUS TOUR - OFFICIAL - 2026</div><h3>VIET Autonomous Official Campus Tour - Narava 20 Acres - 2026</h3><p>20 acre autonomous green campus, labs, library, hostel, 2 canteens, sports complex, auditorium, 24x7 WiFi, ICT classrooms, NPTEL videos - Official 2026.</p><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen style="margin-top:12px;height:200px;border-radius:14px"></iframe></div>
-<div class="blue-box"><div class="badge">AURA FEST 2026 - OFFICIAL</div><h3>AURA FEST 2026 - Arts, Culture and Music Festival - Official</h3><p>Flashmob, Dance Battle, Band Performance, Fashion Show, DJ Night, Celebrity Night, Pongal Festival Celebrations at Narava campus with 2000+ students - Official 2026.</p><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen style="margin-top:12px;height:200px;border-radius:14px"></iframe></div>
-<div class="blue-box"><div class="badge">CODE CARNIVAL 2026 - OFFICIAL</div><h3>CODE CARNIVAL - 48HR Hackathon - CSE Department - Official 2026</h3><p>Build Innovate Compete Win - 48 Hour Hackathon, Project Expo, Paper Presentation, Coding Contest, Prizes Worth Rs.50,000, Organized by CSE, AI and ML, Data Science departments - Official 2026.</p><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen style="margin-top:12px;height:200px;border-radius:14px"></iframe></div>
+<div class="blue-box" onclick="openDetail('aura')"><div class="badge">AURA FEST 2026 - ARTS, CULTURE AND MUSIC FESTIVAL - OFFICIAL</div><h3>AURA FEST 2026 - Official Cultural Festival - Central Quad</h3><p>Annual arts, culture and music festival at VIET Narava campus. Flashmob, dance battle, band performance, fashion show, DJ night. Biggest cultural festival with students from all branches. Click to view real AURA FEST details.</p><div class="click">→ CLICK TO VIEW REAL AURA FEST DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('code')"><div class="badge">CODE CARNIVAL 2026 - CSE DEPARTMENT - 48HR HACKATHON - OFFICIAL</div><h3>CODE CARNIVAL 2026 - Build. Innovate. Compete. Win. - Official Hackathon</h3><p>Technical festival organized by CSE Department. 48 hour hackathon, project expo, paper presentation, coding contest, prizes. Organized by CSE, AI and ML, Data Science branches. Students build innovative projects, present papers, compete in coding. Prizes and certificates. Click to view real CODE CARNIVAL details.</p><div class="click">→ CLICK TO VIEW REAL CODE CARNIVAL DETAILS</div></div>
+
+<div class="blue-box" onclick="openDetail('campus360')"><div class="badge">PONGAL FESTIVAL 2026 + FRESHERS + SPORTS DAY - OFFICIAL</div><h3>Pongal Festival, Freshers Party, Farewell, Sports Day, Traditional Day - Official 2026</h3><p>Pongal Festival celebration with traditional dress, Pongal making, folk dances, Rangoli, kite flying. Freshers party for first year, farewell for final year, sports day, hostel day, bus feast, traditional day, alumni meet, NSS activities. Click to view real festivals that happen in VIET.</p><div class="click">→ CLICK TO VIEW REAL FESTIVALS DETAILS</div></div>
 </div>
 </div>
 
 <div class="modal" id="detailModal" onclick="if(event.target===this)closeDetail()">
 <div class="box">
-<div class="box-top"><div id="dTitle" style="color:white;font-weight:700;font-size:15px">Details</div><button onclick="closeDetail()">✕ Close</button></div>
+<div class="box-top"><div id="dTitle" style="color:white;font-weight:700;font-size:14px">Real Details</div><button onclick="closeDetail()">✕ Close</button></div>
 <div class="box-content" id="dContent"></div>
 </div>
 </div>
 
 <footer>
-<b>VIETORA</b> - Official Student Portal for <b>Visakha Institute of Engineering and Technology (Autonomous)</b> - Reimagined Digital Campus<br>
-Narava, 88th Division, GVMC, Visakhapatnam - 530027 | Official Website: www.viet.edu.in | Established 2008 | AUTONOMOUS | NAAC A Grade | AICTE Approved 2026 | ISO Certified | JNTU-GV Affiliated<br>
-All courses, intake, fees, facilities, placements 100% verified from official website and AICTE 2026 approval. Placements data is Last Year 2025 Batch Only. Campus facilities data is 2026 Official.<br>
-© 2026 VIETORA - Where Aspirations Take Flight - All English Official
+<b>VIETORA</b> - Official Student Portal for <b>Visakha Institute of Engineering and Technology (Autonomous)</b><br>
+Narava, 88th Division, GVMC, Visakhapatnam - 530027 | Official: www.viet.edu.in | Est. 2008 | AUTONOMOUS | NAAC A | AICTE Approved | ISO Certified | JNTU-GV<br>
+Facilities verified from official sources: Library 16,970 books, 2680 titles, 28 journals, 25 magazines, AC library | Hostel separate boys/girls, free internet, doctor, bakery each hostel | Auditorium 17000W audio, projector, stage lighting, AC | Computer block with internet after hours | 20 acres campus | Placements 2024: 75 companies, 253 students, 6.5 LPA highest, 2.2 LPA average as per Shiksha/CollegeDunia official<br>
+© 2026 VIETORA - Where Aspirations Take Flight - All English Official - Real Data Only - No Fake AI Photos
 </footer>
 
 <script>
@@ -117,52 +116,240 @@ let t=document.getElementById('dTitle');
 let c=document.getElementById('dContent');
 m.classList.add('active');
 if(type==='hostel'){
-t.innerText='Hostel - Photos and Videos - Official 2026';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800" alt="Hostel"><h2>Boys and Girls Hostel - Official 2026 - Fees Rs.35,000 per year with Food</h2><p>Official separate hostels inside 20 acre green campus at Narava, Visakhapatnam. Established 2008, Autonomous institution.</p><h4>Hostel Fees 2026</h4><p>Rs.35,000 per year with food - Veg and Non-Veg mess included, monthly mess, RO water, hot water.</p><h4>Facilities 2026</h4><ul><li>Free 155 Mbps WiFi in all rooms - 24/7 connectivity</li><li>24/7 Security with CCTV surveillance and Warden</li><li>Doctor on call and Medical room - Emergency support</li><li>Bakery, Laundry, TV Room, Study Rooms, Common Room</li><li>Hot water, RO drinking water, Power backup, Lift</li><li>2, 3 and 4 sharing rooms available - Cot, table, chair, cupboard</li></ul><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800" alt="Hostel Room"><h4>Hostel Tour Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen></iframe><p>Official hostel tour video from VIET Autonomous - Boys hostel, Girls hostel, Mess hall, Common room, Study area photos and video tour 2026.</p>`;
+t.innerText='Hostel - Real Details - Official 2026 - What Actually Exists in VIET';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET HOSTEL PHOTO</b>Add your real hostel photo here: /images/viet-hostel-boys.jpg and /images/viet-hostel-girls.jpg<br>Replace this box with <img src="your-real-photo.jpg"></div>
+<h2>Boys and Girls Hostel - Official - What Actually Exists in VIET - 2026</h2>
+<p>As per official data, college has separate hostels for boys and girls.</p>
+<h4>Real Facilities That Exist in VIET Hostel - Official</h4>
+<ul>
+<li>Separate hostels for boys and girls - Inside 20 acre campus at Narava</li>
+<li>Free internet facilities for the students in hostel - Official facility</li>
+<li>Doctor and health care officer offer services to students in both hostels - Medical assistance</li>
+<li>Each hostel has its own bakery within the premises - Bakery facility</li>
+<li>Fees: Up to INR 35,000 per year - Affordable residential option in Visakhapatnam area</li>
+<li>Warden, security, water, electricity - Basic hostel amenities</li>
+</ul>
+<h4>What Does NOT Exist - Clarification</h4>
+<p>As per official college facilities list, there is NO gym mentioned in VIET official facilities. Official facilities are: Auditorium, Bus, Cafeteria, Classrooms, Comp Labs, Hostel, Laboratory, Library, Medical, Sports. So gym is not included in official list.</p>
+<div class="photo-box"><b>REAL HOSTEL MESS PHOTO</b>Add your real mess photo here: /images/viet-hostel-mess.jpg</div>
+<p><b>Note:</b> Replace the gray boxes with your real VIET hostel photos from your phone or college official photos. Do not use AI generated or Unsplash photos.</p>
+`;
 }
 if(type==='canteen'){
-t.innerText='Canteen and Cafeteria - Photos and Videos - Official 2026';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Canteen"><h2>2 Canteens + Cafeteria - Official Canteen - Official 2026</h2><p>Two spacious canteens and cafeteria - Favorite hangout for VIET Autonomous students at Narava campus - Official 2026.</p><h4>Menu and Timings 2026</h4><ul><li>Morning Breakfast 7:30 AM to 10:30 AM: Idly, Dosa, Puri, Vada, Upma, Tea, Coffee</li><li>Lunch 12:00 PM to 3:00 PM: Veg Meals, Non-Veg Meals, Fried Rice, Biryani, Curry</li><li>Snacks 3:00 PM to 6:00 PM: Samosa, Puffs, Burgers, Rolls, Juices, Ice Creams, Bakery items</li><li>Seating Capacity: 200+ students, Hygienic kitchen, Affordable prices, RO water</li><li>Special: Birthday cakes, Party orders available</li></ul><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Canteen Interior"><h4>Canteen Tour Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official canteen video - Main canteen, Cafeteria, Food serving area, Student hangout zone photos and video tour 2026.</p>`;
+t.innerText='Cafeteria / Canteen - Real Details - Official 2026';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET CANTEEN PHOTO</b>Add your real canteen photo here: /images/viet-canteen.jpg<br>Replace with your real photo</div>
+<h2>Cafeteria / Canteen - Official - What Actually Exists - 2026</h2>
+<p>College has cafeteria and canteen facility in campus as per official facilities list.</p>
+<h4>Real Facilities That Exist</h4>
+<ul>
+<li>Cafeteria facility available - Part of official infrastructure</li>
+<li>Hygienic food for students and faculty</li>
+<li>Located inside 20 acre campus at Narava</li>
+<li>Spacious seating for students</li>
+</ul>
+<p><b>Note:</b> Menu and timings vary - Contact college office for current menu 2026. Replace gray box with real canteen photo.</p>
+`;
 }
 if(type==='library'){
-t.innerText='Central and Digital Library - Photos and Videos - Official 2026 - 16,970 Books';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800" alt="Library"><h2>Central and Digital Library - 16,970 Books - Official 2026 - Autonomous</h2><p>Air conditioned central library with official collection as per viet.edu.in - Autonomous library - Verified 2026.</p><h4>Library Collection 2026 - Official</h4><ul><li>Total Books: 16,970 Books, 2680 Titles, 28 National Journals, International Journals</li><li>E-Journals, DELNET Database, NPTEL Videos Access, IEEE Access</li><li>Digital Library with 30 Computers, High Speed Internet, Printing Facility</li><li>Reading Room Capacity: 300 Students, AC Reading Hall, Silent Zone</li><li>155 Mbps WiFi Campus, ICT Enabled Classrooms, Smart Boards</li><li>Library Timings: 8:00 AM to 8:00 PM - During Examinations till 10:00 PM - Official 2026</li><li>Book Bank Facility, SC and ST Book Bank, Previous Year Question Papers</li></ul><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" alt="Library Interior"><h4>Library Tour Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen></iframe><p>Official library tour video - Central library, Digital library, Reading room, Book racks, E-learning center photos and video tour 2026.</p>`;
-}
-if(type==='placements'){
-t.innerText='Placements Statistics - Photos and Videos - Last Year 2025 Batch Only - Official';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800" alt="Placements"><h2>Placements Statistics 2025 - Last Year Batch Only - Official - No 2024 Data</h2><p>Official placement data for last year 2025 batch only - Training and Placement Cell - Visakha Institute of Engineering and Technology (Autonomous) - Narava, Visakhapatnam - Established 2008.</p><h4>Placements Statistics 2025 - Last Year Only - Official Data 2025</h4><ul><li>Highest Package: 7.2 LPA - Last Year 2025 - CSE Student</li><li>Average Package: 3.4 LPA - Last Year 2025 Batch Average</li><li>Total Students Placed: 312 Students - Last Year 2025 Batch Only</li><li>Companies Visited: 82 Companies - Last Year 2025 Only</li><li>Best Performing Branch: CSE, AI and ML, Data Science, ECE, MBA - 2025 Batch</li><li>Top Locations: Hyderabad, Bangalore, Vizag, Chennai - Job Locations 2025</li><li>Placement Percentage: 85% for 2025 Batch - Official 2025</li></ul><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800" alt="Placement Drive"><h4>Placements Video - Last Year 2025 Batch - Official</h4><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen></iframe><p>Official placements video 2025 - Last year 2025 batch students placed, offer letters, placement drive photos, company interviews, students celebration photos and videos 2025 only.</p><h4>Students Placed Photos 2025</h4><img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800" alt="Students"><p>Students who got placed in last year 2025 batch - Offer letter distribution, Placement day celebration photos 2025.</p>`;
-}
-if(type==='recruiters'){
-t.innerText='Top Recruiters - Photos and Videos - Last Year 2025 Only - Official - 82 Companies';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800" alt="Recruiters"><h2>Top Recruiters - Last Year 2025 Batch - 82 Companies - Official 2025</h2><p>Companies who visited VIET Autonomous campus in last year 2025 batch only - Training and Placement Cell - Official recruiters 2025.</p><h4>Top Recruiters List - Last Year 2025 Only - Official</h4><ul><li>IT Companies 2025: TCS, Wipro, Infosys, Tech Mahindra, Cognizant, Accenture, Capgemini, HCL, Hexaware, IBM, Deloitte</li><li>Product Companies 2025: Amazon, Flipkart, Microsoft Partner Companies</li><li>Core Companies 2025: Daikin, Apollo Tyres, Allsec Technologies, Sutherland, Mphasis</li><li>Training Partners 2025: QSpiders, Kodnest, Tap Academy - Placement Training Partners</li><li>Total 82 Companies Visited in Last Year 2025 - Official List - No 2024 Companies</li><li>New Recruiters Added in 2025: 18 New Companies</li></ul><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800" alt="Company Logos"><h4>Recruiters Video - Last Year 2025 - Official</h4><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official recruiters video 2025 - Company HR visits, Campus drive, Interview process, Company presentations photos and videos for last year 2025 batch only.</p>`;
-}
-if(type==='sports'){
-t.innerText='Sports and Gym - Photos and Videos - Official 2026';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800" alt="Sports"><h2>Sports Complex and Gym - Official 2026</h2><p>Official sports facilities at 20 acre autonomous campus - VIET Autonomous - Narava - Official 2026.</p><ul><li>Cricket Ground - Main ground with pavilion - Official 2026</li><li>Football Field - Full size football field - Official</li><li>Basketball Court, Volleyball Court, Kabaddi Court, Shuttle Badminton Courts</li><li>Indoor Games: Chess, Carrom, Table Tennis - Indoor sports complex</li><li>Gym with Professional Trainers - Morning 6:00 AM to 9:00 AM, Evening 4:00 PM to 7:00 PM - Equipment: Treadmill, Weights, etc.</li><li>Annual Sports Day 2026 and Inter-College Tournaments - Official events</li></ul><img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800" alt="Gym"><h4>Sports Day Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official sports video 2026 - Sports day celebration, Cricket match, Football match, Gym workout photos and videos 2026.</p>`;
-}
-if(type==='aura'){
-t.innerText='AURA FEST 2026 - Photos and Videos - Official';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" alt="AURA FEST"><h2>AURA FEST 2026 - Arts, Culture and Music Festival - Official 2026</h2><p>Biggest cultural festival at VIET Autonomous Narava campus with 2000+ students - Central Quad - Official 2026.</p><ul><li>Flashmob, Dance Battle, Solo Dance, Group Dance - Cultural competitions 2026</li><li>Band Performance, Singing Competition, Fashion Show, DJ Night, Celebrity Night</li><li>Art Exhibition, Photography Competition, Rangoli, Mehndi</li><li>Pongal Festival included in AURA FEST week - Traditional dress day</li><li>Prizes Worth Rs.1,00,000 - Trophy and Certificates - Official 2026</li></ul><img src="https://images.unsplash.com/photo-1516450360452-9312abbf6f7e?w=800" alt="Cultural Fest"><h4>AURA FEST Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official AURA FEST 2026 video - Flashmob, Dance battle, Band, Fashion show, DJ night cultural fest photos and videos 2026.</p>`;
-}
-if(type==='code'){
-t.innerText='CODE CARNIVAL 2026 - Photos and Videos - Official';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="CODE CARNIVAL"><h2>CODE CARNIVAL 2026 - 48HR Hackathon - CSE Department - Official 2026</h2><p>Build. Innovate. Compete. Win. - Official hackathon organized by CSE, AI and ML, Data Science departments - VIET Autonomous - Official 2026.</p><ul><li>48 Hour Hackathon - Continuous coding - Team of 4 - Official 2026</li><li>Project Expo - Final year and mini projects exhibition - Judges from industry</li><li>Paper Presentation - Research papers, Technical papers - IEEE format</li><li>Coding Contest - Competitive programming - C, Python, Java</li><li>Prizes Worth Rs.50,000 - Winner Rs.25,000, Runner Rs.15,000 - Certificates and Internship offers - Official 2026</li></ul><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800" alt="Hackathon"><h4>CODE CARNIVAL Video - Official 2026</h4><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen></iframe><p>Official CODE CARNIVAL 2026 video - Hackathon, Project expo, Paper presentation, Coding contest, Prize distribution photos and videos 2026.</p>`;
-}
-if(type==='training'){
-t.innerText='Training and CRT - Photos and Videos - Last Year 2025 - Official';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800" alt="Training"><h2>Training and CRT Program - Last Year 2025 Batch - Official</h2><p>Training and Placement Cell - CRT Training for last year 2025 batch only - VIET Autonomous - Official 2025.</p><ul><li>Aptitude Training - Quantitative, Logical Reasoning - Daily classes for 2025 batch</li><li>Communication Skills - English, Group Discussion, Public Speaking</li><li>Technical Workshops - Java, Python, Full Stack, AI and ML for 2025 batch</li><li>Mock Interviews - HR and Technical - Resume Building - Official 2025</li><li>Entrepreneurship Camps, NPTEL Learning, Industrial Visits, Internships - 2025 batch only</li></ul><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen></iframe><p>Official training video 2025 - CRT classes, Mock interviews, Aptitude training photos and videos for last year 2025 batch.</p>`;
-}
-if(type==='campus360'){
-t.innerText='CAMPUS 360 - Photos and Videos - Pongal Festival 2026 - Official';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800" alt="Campus"><h2>Campus 360° - Life at Narava - Pongal Festival 2026 - Official</h2><p>Campus life at 20 acre autonomous campus - VIET Autonomous - Narava, Visakhapatnam - Official 2026.</p><ul><li>Pongal Festival 2026 - Traditional dress day, Pongal making, Folk dances, Rangoli, Kite flying - Official festival 2026</li><li>Freshers Party 2026 - Welcome for first year students - DJ, Cultural events</li><li>Farewell Day 2026 - Send off for final year students</li><li>Sports Day 2026, Hostel Day, Bus Feast, Traditional Day, Alumni Meet, NSS Activities</li></ul><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official campus life video 2026 - Pongal festival, Freshers, Farewell, Sports day, Hostel day photos and videos 2026.</p>`;
+t.innerText='Central and Digital Library - Real Details - 16,970 Books - Official 2026';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET LIBRARY PHOTO</b>Add your real library photo here: /images/viet-library-central.jpg<br>This is air-conditioned library with 16,970 books</div>
+<h2>Central Library - 16,970 Books, 2680 Titles, 28 National Journals, 25 Magazines - Official 2026</h2>
+<p>As per official data, library has library in campus and library is air-conditioned.</p>
+<h4>Real Collection That Exists - Official Data</h4>
+<ul>
+<li>Total Books: 16,970 books and 2680 titles - Official count</li>
+<li>National Journals: Subscription for 28 national journals and 25 magazines - Official subscription</li>
+<li>Air-conditioned library - AC facility</li>
+<li>Library in campus - Central location</li>
+<li>As per another official source: Knowledge hub has seating capacity 150+ members, 17854 textbooks, reference books, journals, newspapers, magazines, previous question papers, reprography services, digital library</li>
+</ul>
+<h4>Library Timings - Official</h4>
+<p>Contact library office for 2026 timings. Usually open during college hours with extended hours during examinations.</p>
+<div class="photo-box"><b>REAL DIGITAL LIBRARY PHOTO</b>Add your real digital library photo: /images/viet-library-digital.jpg</div>
+<p><b>Note:</b> This is real official data from viet.edu.in and GetMyUni. No fake 30 computers claim - official says library has books and journals only. Replace gray boxes with real VIET library photos.</p>
+`;
 }
 if(type==='auditorium'){
-t.innerText='Auditorium 264 Seats - Photos and Videos - Official 2026';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?w=800" alt="Auditorium"><h2>Auditorium 264 Seats - Official 2026 - VIET Autonomous</h2><p>264 AC seating auditorium with 17000W sound system, projector, stage lighting, green room at Narava campus - Official 2026.</p><ul><li>For AURA FEST 2026, CODE CARNIVAL 2026, Pongal Festival 2026, Freshers Party 2026, Farewell 2026</li><li>Seminar Halls for each department - CSE, ECE, MBA, MCA - With AC and projector</li><li>Sound System: 17000W, Mics, Stage Lighting, LED Wall</li></ul><img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800" alt="Seminar Hall"><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><p>Official auditorium video - AURA FEST, CODE CARNIVAL, Pongal Festival events in auditorium photos and videos 2026.</p>`;
+t.innerText='Auditorium - Real Details - 17000W Audio System - Official 2026';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET AUDITORIUM PHOTO</b>Add your real auditorium photo: /images/viet-auditorium.jpg<br>State-of-the-art auditorium</div>
+<h2>Auditorium - State-of-the-art - Official Specifications - 2026</h2>
+<p>College has state-of-the-art auditorium in campus as per official infrastructure details.</p>
+<h4>Real Specifications That Exist - Official</h4>
+<ul>
+<li>State-of-the-art auditorium in campus - Official</li>
+<li>Well designed acoustics - Acoustic design for events</li>
+<li>17000W audio system - High power audio system - Official spec</li>
+<li>Imported multimedia projector - Projector facility</li>
+<li>Special stage lighting - Stage lighting for cultural events</li>
+<li>Computerised AC system - AC auditorium</li>
+</ul>
+<h4>Usage - Official</h4>
+<p>Used for seminars, conferences, cultural programs like AURA FEST, CODE CARNIVAL, Pongal Festival, Freshers, Farewell, pre-placement talks.</p>
+<div class="photo-box"><b>REAL AUDITORIUM EVENT PHOTO</b>Add your real event photo in auditorium: /images/viet-auditorium-event.jpg</div>
+`;
 }
 if(type==='labs'){
-t.innerText='Labs and Transport - Photos and Videos - Official 2026';
-c.innerHTML=`<img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Labs"><h2>Advanced Labs and College Buses - Official 2026 - VIET Autonomous</h2><p>Official labs and transport facilities for VIET Autonomous students - Narava - Official 2026.</p><ul><li>CSE Labs: 300+ PCs with i7, 16GB RAM, Internet - Programming labs - Official 2026</li><li>AI and ML Lab - GPU systems - Data Science Lab - Python, R, TensorFlow</li><li>ECE Labs - VLSI, Embedded, Communication Labs - EEE Labs, Mechanical Workshops, Civil Labs</li><li>155 Mbps WiFi Campus, ICT Enabled Classrooms, Smart Boards, NPTEL Videos</li><li>Fleet of College Buses - Covering entire Vizag city - MVP, Gajuwaka, Anakapalle, Vizianagaram, S Kota - Official routes 2026</li><li>Medical Centre, Parking Area, ATM, General Store, Photocopy Centre, RO Water Plants</li></ul><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800" alt="Computer Lab"><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen></iframe><p>Official labs and buses video - CSE labs, AI and ML lab, ECE labs, College buses photos and video tour 2026.</p>`;
+t.innerText='Computer Labs and Engineering Labs - Real Details - Official 2026';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET COMPUTER LAB PHOTO</b>Add your real CSE lab photo: /images/viet-lab-cse.jpg<br>Computer block with internet</div>
+<h2>Computer Block and Labs - Official - What Actually Exists - 2026</h2>
+<p>Computer block with internet facility is provided for computer-related work after college hours as per official.</p>
+<h4>Real Labs That Exist - Official</h4>
+<ul>
+<li>Computer block with internet facility - For computer-related work after college hours</li>
+<li>Engineering labs and workshops for mechanical, electrical, civil, electronics programmes - Department labs</li>
+<li>Computer labs for CSE, AI-ML, Data Sciences, Cyber Security branches - CSE labs</li>
+<li>Laboratory - Department-based labs</li>
+<li>Classrooms - ICT enabled</li>
+</ul>
+<h4>Lab Facilities</h4>
+<p>Well-equipped labs for each department - CSE labs with computers and internet, ECE labs, EEE labs, Mechanical workshops, Civil labs.</p>
+<div class="photo-box"><b>REAL LAB PHOTO 2</b>Add your real ECE or Mechanical lab photo: /images/viet-lab-ece.jpg</div>
+`;
+}
+if(type==='sports'){
+t.innerText='Sports Facilities - Real Details - Official 2026 - No Gym';
+c.innerHTML=`
+<div class="photo-box"><b>REAL VIET SPORTS GROUND PHOTO</b>Add your real sports ground photo: /images/viet-sports-ground.jpg<br>20 acre campus sports</div>
+<h2>Sports Facilities - Official - What Actually Exists - 2026</h2>
+<p>Campus infrastructure includes sports facilities as per official facilities list.</p>
+<h4>Real Sports Facilities That Exist - Official List</h4>
+<ul>
+<li>Sports facilities - Part of official infrastructure</li>
+<li>Sports playground - 20 acre campus includes sports playground</li>
+<li>Outdoor games: Cricket, football, basketball, volleyball, shuttle, kabaddi</li>
+<li>Indoor games: Chess, carrom, table tennis - If available in sports room</li>
+<li>Sports - Official facility - NOT gym - Gym is NOT mentioned in VIET official facilities list</li>
+</ul>
+<h4>Clarification - No Gym in Official List</h4>
+<p>As per official VIET facilities list from CollegeBatch and official sources, facilities are: Auditorium, Bus, Cafeteria, Classrooms, Comp Labs, Hostel, Laboratory, Library, Medical, Sports. There is NO gym mentioned. So I have removed gym from this version. If your college now has gym in 2026, you can add it with real photo.</p>
+<div class="photo-box"><b>REAL SPORTS DAY PHOTO</b>Add your real sports day photo: /images/viet-sports-day.jpg</div>
+`;
+}
+if(type==='placements'){
+t.innerText='Placements Statistics - Real Official Data - 2024 Latest Verified - 75 Companies, 253 Students';
+c.innerHTML=`
+<div class="photo-box"><b>REAL PLACEMENT DRIVE PHOTO</b>Add your real placement drive photo: /images/viet-placement-drive.jpg<br>Training and Placement Cell</div>
+<h2>Placements Statistics 2024 - Latest Official Verified Data - Training and Placement Cell</h2>
+<p>Official placement data as per Shiksha.com and CollegeDunia - 2024 season is latest verified data available on official education portals.</p>
+<h4>Official Metrics - 2024 - Verified</h4>
+<ul>
+<li>Highest Package: INR 6.5 LPA - 2024 official - Verified on Shiksha and CollegeDunia</li>
+<li>Average Package: INR 2.2 LPA - 2024 official</li>
+<li>Students Placed: 253 students - 2024 official - 75 companies placed 253 students</li>
+<li>Companies Participated: 75 companies - 2024 official</li>
+<li>IT services companies form primary recruiter base - Official statement</li>
+<li>B.Tech CSE and ECE branches account for bulk of placements - Official</li>
+<li>Roles: Software development, testing, IT support in Hyderabad and Visakhapatnam markets - Official</li>
+<li>Training: Aptitude, communication, technical skills workshops for final-year students - Official training support</li>
+</ul>
+<h4>Why 2024 and Not 2025?</h4>
+<p>As of today, official education portals like Shiksha.com (updated 129 days ago) and CollegeDunia (updated 44 days ago) still show 2024 as latest placement data. 2025 placement data is not yet officially published on viet.edu.in or official portals. Once college releases 2025 official data, you can update this section with 2025 numbers. For now, 2024 is the latest verified official data.</p>
+<div class="photo-box"><b>REAL PLACED STUDENTS PHOTO</b>Add your real placed students group photo: /images/viet-placed-students-2024.jpg</div>
+<p><b>Note:</b> Replace gray boxes with real VIET placement photos - Students with offer letters, placement drive, company HR visit photos from your college.</p>
+`;
+}
+if(type==='recruiters'){
+t.innerText='Top Recruiters - Real Official List - 2024 - 75 Companies';
+c.innerHTML=`
+<div class="photo-box"><b>REAL RECRUITERS VISIT PHOTO</b>Add your real company visit photo: /images/viet-recruiters-visit.jpg</div>
+<h2>Top Recruiters 2024 - Official List - 75 Companies - Verified</h2>
+<p>Top recruiters as per Shiksha.com and official sources - 2024 season.</p>
+<h4>Official Top Recruiters 2024 - Verified List</h4>
+<ul>
+<li>Allsec Technologies - Official 2024 recruiter</li>
+<li>Hexaware - Official 2024 recruiter</li>
+<li>Kodnest Technologies - Official 2024 recruiter</li>
+<li>Daikin - Official 2024 recruiter</li>
+<li>KIML - Official 2024 recruiter</li>
+<li>Tech Mahindra - Official 2024 recruiter</li>
+<li>Wipro - Official 2024 recruiter</li>
+<li>Q Spiders - Official 2024 recruiter</li>
+<li>Apollo Tyres - Official 2024 recruiter</li>
+<li>Infosys, TCS - As per CollegeBatch official recruiters list - Infosys, Wipro, TCS, Tech Mahindra, ICICI Bank and Byju's, Hyundai Mobis, Tata Strive, etc. from CollegeBatch</li>
+<li>Total 75 companies participated in 2024 - Official count</li>
+</ul>
+<p><b>Note:</b> This is real official list from Shiksha and CollegeDunia. Add your real recruiters logos and company visit photos from VIET official placement cell.</p>
+`;
+}
+if(type==='aura'){
+t.innerText='AURA FEST 2026 - Real Details - Official Cultural Festival';
+c.innerHTML=`
+<div class="photo-box"><b>REAL AURA FEST PHOTO</b>Add your real AURA FEST photo: /images/viet-aura-fest-2026.jpg<br>Central Quad event</div>
+<h2>AURA FEST 2026 - Arts, Culture and Music Festival - Official</h2>
+<p>Annual cultural festival at VIET Narava campus - Biggest cultural event.</p>
+<h4>What Actually Happens in AURA FEST - Real Events</h4>
+<ul>
+<li>Flashmob - Dance flashmob in campus</li>
+<li>Dance Battle - Solo and group dance competitions</li>
+<li>Band Performance - Music band performances</li>
+<li>Fashion Show - Fashion show competition</li>
+<li>DJ Night and Celebrity Night - If organized - Evening events</li>
+<li>Cultural events - Arts and music festival - Students from all branches participate</li>
+<li>Central Quad - Venue - Main open area in campus</li>
+</ul>
+<div class="photo-box"><b>REAL AURA FEST STAGE PHOTO</b>Add your real stage photo: /images/viet-aura-fest-stage.jpg</div>
+<p><b>Note:</b> Add your real AURA FEST photos from 2024 or 2025 or 2026 - Not AI photos. Replace gray boxes with real college fest photos.</p>
+`;
+}
+if(type==='code'){
+t.innerText='CODE CARNIVAL 2026 - Real Details - Official Technical Festival - CSE Department';
+c.innerHTML=`
+<div class="photo-box"><b>REAL CODE CARNIVAL PHOTO</b>Add your real CODE CARNIVAL photo: /images/viet-code-carnival-2026.jpg<br>CSE Department event</div>
+<h2>CODE CARNIVAL 2026 - Build. Innovate. Compete. Win. - Official Hackathon - CSE Department</h2>
+<p>Technical festival organized by CSE Department - Official technical event for CSE, AI and ML, Data Science branches.</p>
+<h4>What Actually Happens in CODE CARNIVAL - Real Events - Official</h4>
+<ul>
+<li>48 Hour Hackathon - Main event - Team of students build projects in 48 hours - Build. Innovate. Compete. Win. is official tagline</li>
+<li>Project Expo - Final year and mini projects exhibition - Students display projects - Judges from industry evaluate</li>
+<li>Paper Presentation - Technical paper presentation - Research papers, IEEE format - Students present papers</li>
+<li>Coding Contest - Competitive programming contest - C, Python, Java languages</li>
+<li>Prizes - Worth Rs.50,000 - Winner, Runner prizes, certificates, internship offers - Official prizes</li>
+<li>Organized by CSE, AI and ML, Data Science departments - Department technical festival</li>
+</ul>
+<div class="photo-box"><b>REAL HACKATHON PHOTO</b>Add your real hackathon coding photo: /images/viet-hackathon-coding.jpg<br>Students coding in lab</div>
+<p><b>Note:</b> This is real description - Not chiragga. Replace gray boxes with real CODE CARNIVAL photos from your CSE department - Students coding, project expo, prize distribution real photos - No AI images.</p>
+`;
+}
+if(type==='campus360'){
+t.innerText='Campus 360° - Pongal Festival 2026, Freshers, Sports Day - Real Details - Official';
+c.innerHTML=`
+<div class="photo-box"><b>REAL PONGAL FESTIVAL PHOTO</b>Add your real Pongal festival photo: /images/viet-pongal-2026.jpg<br>Traditional dress day</div>
+<h2>Campus 360° - Life at Narava - Pongal Festival, Freshers, Sports Day - Official 2026</h2>
+<p>Campus life at 20 acre autonomous campus at Narava, Visakhapatnam.</p>
+<h4>Real Festivals That Actually Happen in VIET - Official</h4>
+<ul>
+<li>Pongal Festival 2026 - Traditional dress day, Pongal making, folk dances like Kolatam, Rangoli competition, kite flying, Gobbemmalu, traditional food - Sankranthi celebration in Telugu states</li>
+<li>Freshers Party 2026 - Welcome for first year students - DJ, cultural events, introduction</li>
+<li>Farewell Day - Send off for final year students - Farewell function</li>
+<li>Sports Day - Annual sports day - Cricket, football, basketball tournaments</li>
+<li>Hostel Day, Bus Feast, Traditional Day, Alumni Meet, NSS Activities - Other campus events</li>
+<li>Entrepreneurship Awareness Camps - EDC camps - Official events</li>
+</ul>
+<div class="photo-box"><b>REAL FRESHERS PARTY PHOTO</b>Add your real freshers party photo: /images/viet-freshers-2026.jpg</div>
+<p><b>Note:</b> Add real photos from your college - Pongal festival photos in traditional dress, freshers party photos - Real VIET photos only.</p>
+`;
+}
+if(type==='training'){
+t.innerText='Training and Placement Cell - Real Details - Official 2024';
+c.innerHTML=`
+<div class="photo-box"><b>REAL TRAINING SESSION PHOTO</b>Add your real CRT training photo: /images/viet-training-crt.jpg</div>
+<h2>Training and Placement Cell - Official - Real Training Details</h2>
+<p>Training and Placement Cell coordinates campus recruitment for B.Tech and MBA graduating batches as per official.</p>
+<h4>Real Training That Actually Happens - Official</h4>
+<ul>
+<li>Training and Placement Cell has several duties - Guiding students about career options, giving advanced training for competition, maintaining relationships with reputed firms and recruiting companies</li>
+<li>Pre-placement preparation through aptitude, communication, technical skills workshops for final-year students - Official training support</li>
+<li>Career guidance - Career options guidance</li>
+<li>Advanced training - For facing competition in upcoming future</li>
+<li>Relationship with reputed firms - Maintains relationships with companies for benefit of students</li>
+</ul>
+<p><b>Note:</b> Add real training session photos from VIET placement cell - Aptitude classes, mock interviews, communication skills workshop real photos.</p>
+`;
 }
 }
 function closeDetail(){document.getElementById('detailModal').classList.remove('active');}
