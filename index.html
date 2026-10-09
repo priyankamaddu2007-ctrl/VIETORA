@@ -1,96 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIETORA - Official Student Portal | VIET Visakhapatnam</title>
-<meta name="description" content="VIETORA - Where Aspirations Take Flight | VIET Narava Vizag | AURA FEST, CODE CARNIVAL, Placements, Campus Life">
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<style>*{font-family:'Plus Jakarta Sans',sans-serif}.glass{background:rgba(255,255,255,0.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.12)}.glass-dark{background:rgba(15,23,42,0.75);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08)}.glow{box-shadow:0 0 40px rgba(59,130,246,0.3)}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIETORA - Visakha Institute of Engineering & Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f8faff;color:#222}
+header{background:linear-gradient(135deg,#0f172a,#1e3a8a);color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+header h1{font-size:22px;letter-spacing:1px}
+header h1 span{color:#60a5fa}
+nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px}
+.hero{background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.75)),url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070');background-size:cover;background-position:center;color:white;padding:90px 8%;text-align:center}
+.hero h2{font-size:42px;line-height:1.2}
+.hero p{margin:15px 0 25px;opacity:0.9}
+.btn{background:#2563eb;color:white;padding:12px 28px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block}
+.section{padding:60px 8%}
+.section h2{font-size:30px;text-align:center;margin-bottom:8px;color:#0f172a}
+.section .sub{text-align:center;color:#64748b;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 8px 25px rgba(0,0,0,0.06);border:1px solid #eef2ff}
+.card h3{color:#1e3a8a;margin-bottom:8px;font-size:17px}
+.card p{font-size:13.5px;color:#475569;line-height:1.6}
+.badge{display:inline-block;background:#eff6ff;color:#2563eb;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;margin-bottom:10px}
+.fac{background:#0f172a;color:white}
+.fac .card{background:#1e293b;color:#e2e8f0;border:1px solid #334155}
+.fac h2{color:white}
+.fac .sub{color:#94a3b8}
+.fac .card h3{color:#93c5fd}
+.fac .card p{color:#cbd5e1}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center;margin:30px 0}
+.stats div{background:white;padding:20px;border-radius:14px;box-shadow:0 5px 15px rgba(0,0,0,0.05)}
+.stats h3{font-size:28px;color:#2563eb}
+footer{background:#020617;color:#94a3b8;padding:30px 8%;text-align:center;font-size:13px}
+@media(max-width:700px){.hero h2{font-size:28px}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
-<body class="bg-[#020617] text-white overflow-x-hidden">
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[94%] max-w-6xl z-50 glass rounded-2xl px-6 py-3.5 flex justify-between items-center">
-<div class="flex items-center gap-3"><div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-blue-600 rounded-xl flex items-center justify-center font-extrabold">V</div><div><div class="font-extrabold text-[16px] leading-none tracking-wide">VIETORA</div><div class="text-[10px] text-slate-400 tracking-widest">OFFICIAL STUDENT PORTAL</div></div></div>
-<div class="hidden md:flex gap-7 text-[13px] text-slate-300"><a href="#about">About</a><a href="#courses">Academics</a><a href="#life">Campus 360°</a><a href="#placements">Placements</a></div>
-<a href="#contact" class="bg-white text-black px-5 py-2 rounded-full text-[13px] font-bold">Admission 2026</a>
+<body>
+<header>
+<h1>VIET<span>ORA</span></h1>
+<nav>
+<a href="#courses">Courses</a>
+<a href="#facilities">Facilities</a>
+<a href="#placements">Placements</a>
+<a href="#about">About</a>
 </nav>
+</header>
 
-<section class="min-h-screen pt-32 pb-12 px-6 flex items-center relative overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-blue-900/20 to-transparent"></div>
-<div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center relative z-10">
-<div>
-<div class="inline-flex glass px-3 py-1 rounded-full text-[11px] text-violet-300 mb-4">✦ EST. 2008 • JNTU-GV • NAAC A • 20 ACRES NARAVA</div>
-<h1 class="text-[46px] md:text-[68px] font-extrabold leading-[0.88]">Where<br>Aspirations<br><span class="bg-gradient-to-r from-violet-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">Take Flight</span></h1>
-<p class="mt-6 text-slate-400 max-w-[520px] text-[15px] leading-relaxed">VIETORA is the reimagined digital campus of Visakha Institute. Not just a website — a living experience of AURA FEST, CODE CARNIVAL, labs, hostels, placements & culture at Narava.</p>
-<div class="mt-8 flex gap-3"><a href="#courses" class="bg-white text-black px-7 py-3.5 rounded-full font-bold text-sm">Explore VIETORA →</a><button onclick="document.getElementById('chatBox').classList.remove('hidden')" class="glass px-7 py-3.5 rounded-full text-sm">Ask VIETORA AI</button></div>
-<div class="mt-10 grid grid-cols-3 gap-3 max-w-[420px]"><div class="glass-dark rounded-xl p-3 text-center"><div class="font-bold">8</div><div class="text-[10px] text-slate-400">B.Tech Branches</div></div><div class="glass-dark rounded-xl p-3 text-center"><div class="font-bold">75+</div><div class="text-[10px] text-slate-400">Recruiters</div></div><div class="glass-dark rounded-xl p-3 text-center"><div class="font-bold">6.5 LPA</div><div class="text-[10px] text-slate-400">Highest Package</div></div></div>
+<div class="hero">
+<h2>Visakha Institute of Engineering & Technology</h2>
+<p>NAAC 'A' Grade | AICTE Approved | JNTU-GV Affiliated | Est. 2008 | 20 Acre Green Campus at Narava, Visakhapatnam</p>
+<a class="btn" href="#courses">Explore Courses</a>
 </div>
-<div class="space-y-3.5">
-<div class="glass rounded-[20px] p-6 glow hover:scale-[1.01] transition"><div class="flex justify-between items-start"><div class="text-[10px] bg-violet-500/20 text-violet-300 px-2.5 py-1 rounded-full">AURA FEST • 2024-25 • CENTRAL QUAD</div><div class="text-[10px] text-slate-500">OCT 12-14</div></div><h3 class="text-[28px] font-extrabold mt-3">AURA FEST</h3><p class="text-[13px] text-slate-300">Arts, Culture & Music Festival</p><div class="mt-3 flex flex-wrap gap-1.5 text-[10px] text-slate-400"><span class="glass-dark px-2 py-1 rounded-full">Flashmob</span><span class="glass-dark px-2 py-1 rounded-full">Dance Battle</span><span class="glass-dark px-2 py-1 rounded-full">Band</span><span class="glass-dark px-2 py-1 rounded-full">Fashion Show</span></div></div>
-<div class="glass rounded-[20px] p-6 hover:scale-[1.01] transition"><div class="text-[10px] bg-cyan-500/20 text-cyan-300 px-2.5 py-1 rounded-full inline-block">CODE CARNIVAL • CSE DEPT • 48HR</div><h3 class="text-[28px] font-extrabold mt-3">CODE CARNIVAL</h3><p class="text-[13px] text-slate-300">Build. Innovate. Compete. Win.</p><div class="mt-2 text-[11px] text-slate-400">Hackathon • Project Expo • Paper Presentation • Prizes ₹50K</div></div>
-<div class="glass rounded-[20px] p-6 hover:scale-[1.01] transition"><div class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-full inline-block">CAMPUS 360° • LIFE AT NARAVA</div><h3 class="text-[26px] font-extrabold mt-3">CAMPUS 360°</h3><p class="text-[13px] text-slate-300">Sankranthi Sambaralu • Freshers • Sports Day • NSS • Hostel • Bus</p></div>
-</div>
-</div>
-</section>
 
-<section id="about" class="px-6 py-24 max-w-7xl mx-auto">
-<div class="grid md:grid-cols-3 gap-4">
-<div class="md:col-span-2 glass-dark rounded-[24px] p-8"><h2 class="text-3xl font-bold">Why VIETORA?</h2><p class="text-slate-400 mt-3 text-sm">We reimagined what a college website should be. No boring PDFs. Real student life.</p><div class="grid grid-cols-2 gap-4 mt-8 text-sm"><div>💰 <b>Low Fee + JVD</b><br><span class="text-slate-400 text-xs">₹43k/year, Govt pays rest. Best for middle-class families in Vizag.</span></div><div>🤖 <b>Future Branches</b><br><span class="text-slate-400 text-xs">AI & ML, Data Science, Cyber Security - Latest tech.</span></div><div>🏠 <b>Stay & Travel</b><br><span class="text-slate-400 text-xs">Hostel ₹35k, Bus routes Gajuwaka, NAD, MVP, Anakapalli.</span></div><div>🛡️ <b>Ragging-Free</b><br><span class="text-slate-400 text-xs">280+ friendly faculty, 30+ PhD, Mentoring from day 1.</span></div></div></div>
-<div class="glass rounded-[24px] p-8 bg-gradient-to-br from-violet-600/20 to-blue-600/20"><h3 class="font-bold">20 Acres<br>Peaceful Campus</h3><p class="text-xs text-slate-400 mt-3">Hilly terrain at Narava, 88th Division, GVMC. Away from noise, full greenery, Go Green drives, Blood donation camps.</p><div class="mt-6 text-[11px] glass-dark p-3 rounded-xl">📍 Narava, Visakhapatnam - 530027</div></div>
-</div>
-</section>
-
-<section id="courses" class="px-6 py-20 bg-slate-900/40">
-<div class="max-w-7xl mx-auto"><h2 class="text-4xl font-bold text-center">Academics</h2><div class="grid md:grid-cols-3 gap-5 mt-10">
-<div class="bg-white text-black rounded-[20px] p-7"><div class="text-xs bg-black text-white px-2 py-1 rounded-full inline-block">MOST POPULAR</div><h4 class="font-extrabold text-xl mt-4">B.Tech</h4><p class="text-3xl font-extrabold mt-2">₹1.72L <span class="text-sm font-normal">/ 4 yrs</span></p><p class="text-xs mt-4 leading-relaxed text-slate-600">CSE • AI & ML • Data Science • Cyber Security • ECE • EEE • Mech • Civil<br><br><b>Via AP EAPCET</b> - cap.apcfss.in</p></div>
-<div class="glass-dark rounded-[20px] p-7"><h4 class="font-bold text-xl">M.Tech / MBA / MCA</h4><p class="text-3xl font-bold mt-2">₹70k - 1L</p><p class="text-xs mt-4 text-slate-400">CSE, VLSI, Power Systems, Finance, Marketing, HR, Business Analytics<br><br>Via GATE / ICET</p></div>
-<div class="glass-dark rounded-[20px] p-7"><h4 class="font-bold text-xl">Diploma</h4><p class="text-3xl font-bold mt-2">₹75k</p><p class="text-xs mt-4 text-slate-400">CSE, ECE, Mech, Civil, Electrical, Agri<br><br>Via POLYCET - 3 Years</p></div>
-</div></div>
-</section>
-
-<section id="life" class="px-6 py-24 max-w-7xl mx-auto">
-<h2 class="text-4xl font-bold">Campus 360° & Competitions</h2>
-<div class="grid md:grid-cols-4 gap-4 mt-10 text-sm">
-<div class="glass-dark p-5 rounded-2xl"><b>🏆 Technical</b><br><span class="text-xs text-slate-400">Hackathons, Paper Presentation, Seminars, Workshops, Project Competitions, Industrial Visits, Internships</span></div>
-<div class="glass-dark p-5 rounded-2xl"><b>🎭 Cultural</b><br><span class="text-xs text-slate-400">Dance (Classical/Western), Singing, Rangoli, Essay Writing, Elocution, Debate, Mehandi, Drawing, Fashion Show</span></div>
-<div class="glass-dark p-5 rounded-2xl"><b>⚽ Sports</b><br><span class="text-xs text-slate-400">Inter-college Cricket, Volleyball, Kabaddi, Badminton, Athletics, Gym, Annual Sports Day</span></div>
-<div class="glass-dark p-5 rounded-2xl"><b>🌱 NSS & Social</b><br><span class="text-xs text-slate-400">Go Green Plantation, Blood Donation Camps, Village Visits, Personality Dev, Soft Skills, Parent Feedback</span></div>
-</div>
-<div class="grid md:grid-cols-3 gap-4 mt-6">
-<div class="glass p-5 rounded-2xl text-sm"><b>📚 Library</b><br><span class="text-xs text-slate-400">17,854 Books, E-Journals, Digital Library, 24x7 Internet Labs</span></div>
-<div class="glass p-5 rounded-2xl text-sm"><b>🍽️ Canteen & Auditorium</b><br><span class="text-xs text-slate-400">Affordable veg food, 500+ seating auditorium for events</span></div>
-<div class="glass p-5 rounded-2xl text-sm"><b>🕘 Daily Culture</b><br><span class="text-xs text-slate-400">9 AM - 4 PM, Daily small exams for learning, Disciplined</span></div>
-</div>
-</section>
-
-<section id="placements" class="px-6 py-20 bg-slate-900/40 text-center">
-<div class="max-w-7xl mx-auto"><h2 class="text-4xl font-bold">Placements @ VIETORA</h2><div class="flex justify-center gap-12 mt-10"><div><div class="text-4xl font-extrabold">6.5</div><div class="text-xs text-slate-400">LPA Highest</div></div><div><div class="text-4xl font-extrabold">79%</div><div class="text-xs text-slate-400">Placement Rate</div></div><div><div class="text-4xl font-extrabold">75+</div><div class="text-xs text-slate-400">Companies</div></div><div><div class="text-4xl font-extrabold">253+</div><div class="text-xs text-slate-400">Placed 2024</div></div></div><p class="mt-10 text-sm text-slate-400">TCS • Infosys • Wipro • Tech Mahindra • Cognizant • Capgemini • HCL • Hexaware • QSpiders • Allsec • Daikin • Apollo Tyres</p><p class="text-xs text-slate-500 mt-3">CRT Training from 2nd Year • Mock Interviews • Resume Building</p></div>
-</section>
-
-<section id="contact" class="px-6 py-20 max-w-7xl mx-auto">
-<div class="glass-dark rounded-[32px] p-8 md:p-12 grid md:grid-cols-2 gap-10">
-<div><h2 class="text-4xl font-extrabold">Join VIETORA</h2><p class="text-slate-400 mt-2 text-sm">Admission 2026 - Direct Official Contact</p><div class="mt-8 space-y-3 text-sm"><div class="flex gap-3"><span class="glass px-3 py-1 rounded-full text-xs">📞</span> <b>9959617476</b> - Admission Enquiry</div><div class="flex gap-3"><span class="glass px-3 py-1 rounded-full text-xs">📞</span> <b>9959617477</b> - General</div><div class="flex gap-3"><span class="glass px-3 py-1 rounded-full text-xs">📧</span> vietvsp@gmail.com / website@viet.edu.in</div><div class="flex gap-3"><span class="glass px-3 py-1 rounded-full text-xs">🌐</span> viet.edu.in • cap.apcfss.in (Counselling)</div><div class="flex gap-3"><span class="glass px-3 py-1 rounded-full text-xs">📍</span> 88th Div, Narava, GVMC, Vizag - 530027</div></div></div>
-<div class="bg-white rounded-[20px] p-2"><iframe src="https://www.google.com/maps?q=VIET+College+Narava+Visakhapatnam&z=15&output=embed" class="w-full h-[320px] rounded-[16px] border-0"></iframe></div>
-</div>
-<div class="text-center mt-8 text-[11px] text-slate-500">VIETORA • Official Student Initiative • Not Official College Website • Built by Students for Students • Where Aspirations Take Flight • 2026</div>
-</section>
-
-<div class="fixed bottom-6 right-6 z-[70]">
-<button id="chatToggle" class="w-14 h-14 bg-white text-black rounded-full shadow-2xl font-bold">V</button>
-<div id="chatBox" class="hidden absolute bottom-[70px] right-0 w-[360px] h-[500px] bg-white rounded-[20px] shadow-2xl flex flex-col overflow-hidden text-black">
-<div class="bg-black text-white p-4 flex justify-between items-center"><div><div class="font-bold text-sm">VIETORA AI</div><div class="text-[11px] text-slate-400">Official Assistant • Ask anything</div></div><button onclick="document.getElementById('chatBox').classList.add('hidden')" class="text-slate-400">✕</button></div>
-<div id="msgs" class="flex-1 overflow-y-auto p-4 space-y-3 bg-[#f8fafc] text-[13px]"></div>
-<div class="p-3 flex gap-2 border-t bg-white"><input id="q" class="flex-1 bg-slate-100 rounded-full px-4 py-2.5 text-[13px] outline-none" placeholder="Ex: AURA FEST ante enti?" onkeypress="if(event.key==='Enter')send()"><button onclick="send()" class="bg-black text-white w-9 h-9 rounded-full text-sm">➤</button></div>
+<div class="section" id="courses">
+<h2>Academic Programs</h2>
+<p class="sub">Affiliated to JNTU-Gurajada Vizianagaram | Approved by AICTE & UGC</p>
+<div class="grid">
+<div class="card"><span class="badge">B.TECH 4 YEARS - 8 BRANCHES</span><h3>Computer Science & Engineering</h3><p><b>CSE, AI & ML, Data Science, Cyber Security, ECE, EEE, Mechanical, Civil.</b><br>Eligibility: 10+2 PCM 45% + AP EAPCET<br>Fee: Rs.43,000/year</p></div>
+<div class="card"><span class="badge">MBA 2 YEARS</span><h3>Master of Business Administration</h3><p>Specializations: Finance, Marketing, HR, Business Analytics, Health Management, Logistics & Supply Chain Management.<br>180 Seats | Fee: Rs.35,000/year | AP ICET</p></div>
+<div class="card"><span class="badge">MCA 2 YEARS</span><h3>Master of Computer Applications</h3><p>Advanced Programming, AI, Cloud Computing, Full Stack Development. Industry aligned curriculum.<br>Fee: Rs.35,000/year | AP ICET</p></div>
+<div class="card"><span class="badge">M.TECH 2 YEARS - 6 SPECIALIZATIONS</span><h3>Master of Technology</h3><p>CSE (18), VLSI Design (18), Power Systems (18), Thermal (18), Structural (36), CAD/CAM (18).<br>Fee: Rs.50,000/year | GATE / AP PGECET</p></div>
+<div class="card"><span class="badge">BBA & BCA 3 YEARS</span><h3>Degree Programs</h3><p><b>BBA:</b> Business Management, Entrepreneurship.<br><b>BCA:</b> Computer Applications, Software Development.<br>Fee: Rs.25,000/year | OAMDC</p></div>
+<div class="card"><span class="badge">DIPLOMA 3 YEARS</span><h3>Polytechnic Diploma</h3><p>After 10th - Engineering Diploma. Lateral entry to B.Tech 2nd Year. Practical oriented workshops.<br>Fee: Rs.25,000/year | AP POLYCET</p></div>
 </div>
 </div>
 
-<script>
-const db={"why":"VIETORA - Why VIET?\nEst 2008, JNTU-GV Affiliated, AICTE Approved, NAAC A Grade, 20 Acres Narava\nFee ₹43k/year + JVD Free, Hostel ₹35k, Bus all Vizag routes\n75+ companies, 6.5 LPA highest, Ragging-free, 280+ faculty","courses":"📚 VIETORA Academics\nB.Tech ₹1.72L - CSE, AI/ML, Data Science, Cyber Security, ECE, EEE, Mech, Civil via EAPCET\nM.Tech ₹1L, MBA/MCA ₹70k via GATE/ICET, Diploma ₹75k via POLYCET","fests":"🎉 VIETORA Campus 360\nAURA FEST - Annual cultural - Flashmob, Dance, Singing, Fashion Show, Band\nCODE CARNIVAL - 48hr Hackathon, Project Expo, Paper Presentation, Prizes ₹50k\nSankranthi Sambaralu - Traditional, Rangoli, Folk dance\nFreshers Day, Annual Day, Sports Day, Christmas, Ganesh Chaturthi","campus":"🏫 Campus Life @ Narava\n20 acres hilly green, Library 17,854 books, Labs 24x7 internet, Auditorium 500+, Canteen, Sports Ground Cricket/Volleyball, Gym\nHostel separate boys/girls ₹35k, Bus Gajuwaka NAD MVP Dwaraka Anakapalli ₹20-25k, Timings 9-4 daily exams","comp":"🏆 Competitions @ VIETORA\nTechnical: Hackathons, Papers, Seminars, Workshops, Industrial Visits, Internships\nCultural: Dance, Singing, Rangoli, Essay, Elocution, Mehandi\nSports: Cricket, Volleyball, Kabaddi, Badminton inter-college\nNSS: Go Green Plantation, Blood Donation, Village help, Soft skills from 1st year","placements":"💼 Placements\n6.5 LPA Highest, 2.2 Avg, 79% Rate, 253 placed 2024, 1524 last 2 years\nTCS, Infosys, Wipro, Tech Mahindra, Cognizant, Capgemini, HCL, Hexaware, QSpiders\nCRT training from 2nd year","admission":"📞 VIETORA Official Contact\nAdmission: 9959617476\nGeneral: 9959617477\nEmail: vietvsp@gmail.com, website@viet.edu.in\nAddress: 88th Division Narava GVMC Vizag 530027\nApply via cap.apcfss.in - AP EAPCET/ECET/ICET/POLYCET"};
-const msgs=document.getElementById('msgs');
-function add(t,me){const d=document.createElement('div');d.className=me?'bg-black text-white ml-auto max-w-[80%] p-3 rounded-[16px] rounded-br-[4px]':'bg-white border max-w-[85%] p-3 rounded-[16px] rounded-bl-[4px] shadow-sm';d.style.whiteSpace='pre-wrap';d.innerText=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
-function reply(q){q=q.toLowerCase();if(q.includes('why')||q.includes('about'))return db.why;if(q.includes('course')||q.includes('fee')||q.includes('branch'))return db.courses;if(q.includes('aura')||q.includes('code')||q.includes('fest')||q.includes('sankranthi')||q.includes('cultural')||q.includes('freshers'))return db.fests;if(q.includes('hostel')||q.includes('bus')||q.includes('library')||q.includes('campus')||q.includes('life')||q.includes('360'))return db.campus;if(q.includes('compet')||q.includes('nss')||q.includes('sports')||q.includes('club'))return db.comp;if(q.includes('place')||q.includes('package')||q.includes('company')||q.includes('job'))return db.placements;if(q.includes('admission')||q.includes('contact')||q.includes('number')||q.includes('phone'))return db.admission;return "Welcome to VIETORA! 🚀\nTry:\n• Why VIET?\n• Courses & Fees\n• AURA FEST / CODE CARNIVAL\n• Campus 360°\n• Competitions\n• Placements\n• Admission Contact 9959617476";}
-function send(){const i=document.getElementById('q');const v=i.value.trim();if(!v)return;add(v,1);i.value='';setTimeout(()=>add(reply(v),0),350)}
-document.getElementById('chatToggle').onclick=()=>{const b=document.getElementById('chatBox');b.classList.toggle('hidden');if(!msgs.innerHTML)add("Hi! I'm VIETORA AI ✨\n\nNenu VIET Narava motham cheptha!\n\nAsk me:\n⭐ Why VIET?\n📚 Courses & Fees\n🎉 AURA FEST / CODE CARNIVAL\n🏫 Campus 360°\n🏆 Competitions\n💼 Placements\n📞 Admission 9959617476",0)}
-</script>
+<div class="section fac" id="facilities">
+<h2>Campus Facilities</h2>
+<p class="sub">Everything you need for a complete college life experience</p>
+<div class="grid">
+<div class="card"><h3>Hostel Facility</h3><p>Separate Boys & Girls Hostels inside campus. Rs.35,000/year including food. WiFi, 24/7 security, Warden, Medical support.</p></div>
+<div class="card"><h3>Cafeteria & Canteen</h3><p>2 Spacious Canteens + Food Court serving hygienic food, snacks, juices, bakery. Seating for 200+ students.</p></div>
+<div class="card"><h3>Library & Digital Library</h3><p>Central AC Library with 16,970+ Books, 2680 Titles, 28 National Journals, E-Journals, NPTEL, DELNET. Capacity 300. 155 Mbps internet.</p></div>
+<div class="card"><h3>Auditorium</h3><p>264 Seating AC Auditorium with 17000W Sound, Projector, Stage Lighting. For Cultural Fest, Freshers Party, Seminars.</p></div>
+<div class="card"><h3>Sports Complex</h3><p>Cricket Ground, Football Field, Basketball, Volleyball, Kabaddi, Shuttle Badminton, Chess, Carrom. Annual Sports Day.</p></div>
+<div class="card"><h3>Gym & Fitness</h3><p>Modern Gym with professional trainers, strength & cardio equipment. Open morning & evening.</p></div>
+<div class="card"><h3>Advanced Labs</h3><p>All Dept Labs - CSE Labs (300+ PCs), ECE, EEE, Mechanical Workshops, Civil Labs, Computer Centre.</p></div>
+<div class="card"><h3>Transport & More</h3><p>College Buses covering entire Vizag, Medical Centre, Parking, General Store, Photocopy Centre, ATM, Guest Rooms.</p></div>
+</div>
+</div>
+
+<div class="section" id="placements">
+<h2>Placements 2024</h2>
+<p class="sub">Training & Placement Cell - Building Careers Since 2008</p>
+<div class="stats">
+<div><h3>6.5 LPA</h3><p>Highest Package</p></div>
+<div><h3>2.2 LPA</h3><p>Average Package</p></div>
+<div><h3>253+</h3><p>Students Placed</p></div>
+<div><h3>75+</h3><p>Companies</p></div>
+</div>
+<div class="grid">
+<div class="card"><h3>Top Recruiters</h3><p>TCS, Wipro, Infosys, Tech Mahindra, HCL, Hexaware, Allsec, Daikin, Kodnest, QSpiders, Apollo Tyres and 60+ more.</p></div>
+<div class="card"><h3>Training Programs</h3><p>CRT Training, Aptitude, Communication Skills, Technical Workshops, Mock Interviews, Resume Building for final year.</p></div>
+<div class="card"><h3>Cultural & Events</h3><p>Cultural Fest & Pongal Celebrations, Freshers Party, Farewell, Sports Day, Hostel Day, Traditional Day, Tech Fest, Hackathons.</p></div>
+</div>
+</div>
+
+<div class="section" id="about" style="background:#f1f5f9">
+<h2>About VIET</h2>
+<p class="sub">Varaha Lakshmi Narasimha Swamy Educational Trust | Narava, 88th Division, GVMC, Visakhapatnam - 530027</p>
+<div class="grid">
+<div class="card"><h3>Our Vision</h3><p>To become a Centre of Excellence in technical education and produce global leaders with sound technical, ethical and spiritual knowledge.</p></div>
+<div class="card"><h3>Location Advantage</h3><p>20 Acre Green Campus on outskirts of Vizag. Well connected by Train, Air, Road via NH. Peaceful learning environment.</p></div>
+<div class="card"><h3>Why Choose VIET?</h3><p>NAAC A Grade, ISO Certified, Experienced Faculty (PhD holders), Affordable Fees, Strong Alumni, Best Infrastructure in Vizag.</p></div>
+</div>
+</div>
+
+<footer>
+<p><b>VIETORA</b> | Visakha Institute of Engineering & Technology (VIET) - Official Student Portal<br>
+Narava, GVMC, Visakhapatnam - 530027 | www.viet.edu.in | Est. 2008<br>
+© 2026 VIETORA. All data from official sources.</p>
+</footer>
 </body>
 </html>
