@@ -3,110 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>VIETORA | VIET Autonomous - Luxury Student Portal</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<title>VIETORA | VIET Autonomous Official Student Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#050a18;color:#e2e8f0;overflow-x:hidden}
+body{font-family:'Poppins',sans-serif;background:#060d1f;color:#e2e8f0;overflow-x:hidden;scroll-behavior:smooth}
 h1,h2{font-family:'Space Grotesk',sans-serif}
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(5,10,24,0.9);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:26px;font-weight:800;letter-spacing:2px}
-.logo span{background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-nav a{color:#94a3b8;text-decoration:none;margin-left:22px;font-size:13px;font-weight:500}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(6,13,31,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+.logo-text h3{font-size:18px;line-height:1;font-weight:800;letter-spacing:1px}
+.logo-text p{font-size:9px;letter-spacing:1.5px;color:#64748b;font-weight:600}
+nav{display:flex;gap:28px;align-items:center}
+nav a{color:#94a3b8;text-decoration:none;font-size:13px;font-weight:500;transition:0.3s}
 nav a:hover{color:white}
-.hero{padding:150px 6% 90px;background:radial-gradient(900px 500px at 15% -10%,rgba(96,165,250,0.28),transparent),radial-gradient(900px 500px at 85% 10%,rgba(167,139,250,0.22),transparent),#050a18;text-align:center}
-.hero h1{font-size:58px;line-height:1.05}
-.hero h1 .grad{background:linear-gradient(90deg,#fff 30%,#93c5fd 70%,#c4b5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{max-width:760px;margin:20px auto;color:#94a3b8;font-size:15.5px}
-.search-wrap{max-width:700px;margin:34px auto 0;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:60px;padding:6px;display:flex;backdrop-filter:blur(10px)}
-.search-wrap input{flex:1;background:transparent;border:none;color:white;padding:16px 22px;outline:none;font-size:15px}
-.search-wrap button{background:linear-gradient(90deg,#2563eb,#7c3aed);border:none;color:white;padding:13px 28px;border-radius:40px;font-weight:700;cursor:pointer}
-.grid{padding:60px 6%;display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.025));border:1px solid rgba(255,255,255,0.08);border-radius:22px;padding:26px;transition:.45s;position:relative}
-.card:hover{transform:translateY(-8px);border-color:rgba(96,165,250,0.4);box-shadow:0 24px 50px rgba(0,0,0,0.5)}
-.badge{font-size:10px;letter-spacing:1.2px;font-weight:800;padding:6px 12px;border-radius:30px;background:rgba(96,165,250,0.14);color:#93c5fd;border:1px solid rgba(96,165,250,0.25);display:inline-block;margin-bottom:14px}
-.card h3{font-size:18px;color:white;margin-bottom:10px}
-.card p{font-size:13.6px;color:#94a3b8;line-height:1.75}
-.section-title{text-align:center;padding:70px 6% 10px}
-.section-title h2{font-size:38px;color:white}
-.section-title p{color:#64748b;margin-top:10px;font-size:14px}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;padding:30px 6% 80px}
-.vcard{background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden}
-.vcard iframe{width:100%;height:210px;border:none}
-.vcard .vinfo{padding:16px 18px}
-.vcard h4{font-size:14.5px;color:white}
-.vcard p{font-size:12px;color:#64748b;margin-top:5px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:0 6% 30px}
-.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:22px;text-align:center}
-.stat h3{font-size:32px;background:linear-gradient(90deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.stat p{font-size:12px;color:#94a3b8;margin-top:6px}
-.no-res{text-align:center;color:#64748b;padding:24px;display:none}
-footer{padding:50px 6%;text-align:center;border-top:1px solid rgba(255,255,255,0.06);color:#475569;font-size:12.5px;line-height:2}
-@media(max-width:768px){.hero h1{font-size:36px}.stats{grid-template-columns:repeat(2,1fr)}nav{display:none}}
+.adm-btn{background:#f1f5f9;color:#0f172a;padding:10px 20px;border-radius:30px;font-weight:700;font-size:13px;text-decoration:none}
+.hero{min-height:100vh;padding:110px 5% 60px;background:radial-gradient(900px 500px at 20% 30%,rgba(37,99,235,0.25),transparent),radial-gradient(800px 400px at 80% 60%,rgba(124,58,237,0.2),transparent),linear-gradient(180deg,#070e24 0%,#0a1535 100%);display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center}
+.hero-left h4{display:inline-block;background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);color:#93c5fd;padding:6px 14px;border-radius:20px;font-size:10px;letter-spacing:1px;font-weight:700;margin-bottom:22px}
+.hero-left h1{font-size:62px;line-height:0.95;font-weight:700;letter-spacing:-1px}
+.hero-left h1 span.light{color:white}
+.hero-left h1 span.blue{background:linear-gradient(90deg,#93c5fd,#67e8f9);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-left p{margin-top:22px;color:#94a3b8;font-size:14px;line-height:1.7;max-width:520px}
+.hero-actions{display:flex;gap:14px;margin-top:28px}
+.btn-primary{background:#f1f5f9;color:#0f172a;padding:14px 28px;border-radius:30px;font-weight:700;font-size:14px;border:none;cursor:pointer}
+.btn-secondary{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:white;padding:14px 28px;border-radius:30px;font-weight:600;font-size:14px;cursor:pointer;backdrop-filter:blur(10px)}
+.hero-stats{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.stat-mini{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:14px 20px;text-align:center;min-width:110px}
+.stat-mini h3{font-size:18px;color:white}
+.stat-mini p{font-size:10px;color:#94a3b8;margin-top:2px}
+.hero-right{display:flex;flex-direction:column;gap:16px}
+.side-card{background:linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:18px 20px;backdrop-filter:blur(16px);transition:0.4s;cursor:pointer}
+.side-card:hover{transform:translateX(-6px);border-color:rgba(96,165,250,0.4)}
+.side-card .tag{display:inline-block;font-size:9px;letter-spacing:0.8px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:10px}
+.tag-blue{background:rgba(37,99,235,0.2);color:#93c5fd;border:1px solid rgba(37,99,235,0.3)}
+.tag-cyan{background:rgba(6,182,212,0.2);color:#67e8f9;border:1px solid rgba(6,182,212,0.3)}
+.side-card h3{font-size:20px;color:white}
+.side-card p{font-size:12px;color:#94a3b8;margin-top:4px}
+.side-card .pills{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.pills span{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);padding:4px 10px;border-radius:20px;font-size:10px;color:#cbd5e1}
+.search-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(3,7,18,0.9);backdrop-filter:blur(20px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+.search-modal.active{display:flex}
+.search-box{background:#0f172a;border:1px solid rgba(255,255,255,0.1);border-radius:24px;width:100%;max-width:600px;overflow:hidden}
+.search-box input{width:100%;background:transparent;border:none;color:white;padding:22px 24px;font-size:16px;outline:none}
+.search-results{max-height:400px;overflow-y:auto;padding:0 12px 12px}
+.search-item{padding:14px 16px;border-radius:12px;cursor:pointer;transition:0.2s}
+.search-item:hover{background:rgba(255,255,255,0.06)}
+.search-item h4{font-size:14px;color:white}
+.search-item p{font-size:12px;color:#64748b;margin-top:3px}
+.section{padding:80px 5%}
+.section-header{text-align:center;margin-bottom:50px}
+.section-header h2{font-size:38px;color:white}
+.section-header p{color:#64748b;margin-top:10px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:22px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:24px;transition:0.4s}
+.card:hover{transform:translateY(-6px);border-color:rgba(96,165,250,0.3)}
+.badge{font-size:9px;letter-spacing:1px;font-weight:800;padding:5px 12px;border-radius:20px;background:rgba(96,165,250,0.15);color:#93c5fd;border:1px solid rgba(96,165,250,0.25);display:inline-block;margin-bottom:12px}
+.card h3{font-size:17px;color:white;margin-bottom:8px}
+.card p{font-size:13px;color:#94a3b8;line-height:1.7}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.vcard{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden}
+.vcard iframe{width:100%;height:200px;border:none}
+.vcard div{padding:14px 16px}
+.vcard h4{font-size:13px;color:white}
+.vcard p{font-size:11px;color:#64748b;margin-top:4px}
+footer{padding:40px 5%;text-align:center;border-top:1px solid rgba(255,255,255,0.06);color:#475569;font-size:11px;line-height:1.8}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:90px}.hero-left h1{font-size:42px}nav{display:none}}
 </style>
 </head>
 <body>
-<header><div class="logo">VIET<span>ORA</span></div><nav><a href="#courses">Courses</a><a href="#campus">Campus Life</a><a href="#videos">Videos</a><a href="#placements">Placements</a><a href="https://www.viet.edu.in" target="_blank">Official Site</a></nav></header>
+<header>
+<div class="logo"><div class="logo-icon">V</div><div class="logo-text"><h3>VIETORA</h3><p>OFFICIAL STUDENT PORTAL</p></div></div>
+<nav><a href="#about">About</a><a href="#academics">Academics</a><a href="#campus">Campus 360°</a><a href="#placements">Placements</a><a href="#" onclick="openSearch();return false;">Search</a></nav>
+<a class="adm-btn" href="#academics">Admission 2025</a>
+</header>
 
-<section class="hero">
-<div style="display:inline-block;padding:7px 18px;border-radius:30px;background:rgba(96,165,250,0.14);border:1px solid rgba(96,165,250,0.3);color:#93c5fd;font-size:11px;letter-spacing:1.2px;font-weight:700;margin-bottom:20px">EST. 2008 • AUTONOMOUS • NAAC A GRADE • AICTE APPROVED • JNTU-GV AFFILIATED</div>
-<h1><span class="grad">Where VIET<br>Autonomous Becomes VIETORA</span></h1>
-<p><b>Visakha Institute of Engineering & Technology (Autonomous)</b> - NAAC A Grade, 20 Acre Luxury Green Campus at Narava, Visakhapatnam. Approved by AICTE, Affiliated to JNTU-Gurajada Vizianagaram, ISO Certified. 100% verified from viet.edu.in & AICTE 2025-26.</p>
-<div class="search-wrap"><input id="searchBox" type="text" placeholder="Search: MBA 180, MCA 180, BBA, BCA, Canteen, Hostel, Library, Sports, Autonomous..." onkeyup="doSearch()"><button onclick="doSearch()">Search</button></div>
+<section class="hero" id="about">
+<div class="hero-left">
+<h4>EST. 2008 • AUTONOMOUS • JNTU-GV • NAAC A • 20 ACRES NARAVA</h4>
+<h1><span class="light">Where Aspirations</span><br><span class="blue">Take Flight</span></h1>
+<p><b>VIETORA is the reimagined digital campus of Visakha Institute of Engineering & Technology (Autonomous).</b> Not just a website — a living experience of AURA FEST, CODE CARNIVAL, labs, hostels, placements and culture at Narava. 100% verified from viet.edu.in and AICTE 2025-26. NAAC A Grade, AICTE Approved, ISO Certified.</p>
+<div class="hero-actions">
+<button class="btn-primary" onclick="document.getElementById('academics').scrollIntoView({behavior:'smooth'})">Explore VIETORA →</button>
+<button class="btn-secondary" onclick="openSearch()">Ask VIETORA AI</button>
+</div>
+<div class="hero-stats">
+<div class="stat-mini"><h3>8</h3><p>B.Tech Branches</p></div>
+<div class="stat-mini"><h3>75+</h3><p>Recruiters</p></div>
+<div class="stat-mini"><h3>6.5 LPA</h3><p>Highest Package</p></div>
+<div class="stat-mini"><h3>Autonomous</h3><p>Institution</p></div>
+</div>
+</div>
+<div class="hero-right">
+<div class="side-card" onclick="document.getElementById('events').scrollIntoView({behavior:'smooth'})">
+<span class="tag tag-blue">AURA FEST • 2024-25 • CENTRAL QUAD</span>
+<h3>AURA FEST</h3>
+<p>Arts, Culture and Music Festival</p>
+<div class="pills"><span>Flashmob</span><span>Dance Battle</span><span>Band</span><span>Fashion Show</span></div>
+</div>
+<div class="side-card" onclick="document.getElementById('academics').scrollIntoView({behavior:'smooth'})">
+<span class="tag tag-cyan">CODE CARNIVAL • CSE DEPT • 48HR</span>
+<h3>CODE CARNIVAL</h3>
+<p>Build. Innovate. Compete. Win.</p>
+<div class="pills"><span>Hackathon</span><span>Project Expo</span><span>Paper Presentation</span><span>Prizes 50K</span></div>
+</div>
+<div class="side-card" onclick="document.getElementById('campus').scrollIntoView({behavior:'smooth'})">
+<span class="tag tag-cyan">CAMPUS 360° • LIFE AT NARAVA</span>
+<h3>CAMPUS 360°</h3>
+<p>Sankranthi Sambaralu, Freshers, Sports Day, Hostel, Bus</p>
+<div class="pills"><span>2 Canteens</span><span>Hostel</span><span>Library 16,970 Books</span><span>Sports</span></div>
+</div>
+</div>
 </section>
 
-<div class="section-title" id="courses"><h2>Academic Programs - Autonomous</h2><p>Official AICTE Intake 2025-26 | viet.edu.in | Autonomous Institution</p></div>
+<div class="search-modal" id="searchModal" onclick="if(event.target===this)closeSearch()">
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search MBA 180, MCA 180, BBA, Hostel, Canteen, Events..." onkeyup="doSearch()" autofocus>
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
+
+<div class="section" id="academics" style="background:#080e26">
+<div class="section-header"><h2>Academic Programs - Autonomous</h2><p>Official AICTE Intake 2025-26 • viet.edu.in • Autonomous Institution • JNTU-GV Affiliated</p></div>
 <div class="grid">
-<div class="card searchable"><span class="badge">B.TECH AUTONOMOUS - 4 YEARS</span><h3>CSE 240 Seats + AI & ML 60, Data Science 60, Cyber Security 60</h3><p>Flagship branch under Autonomous. 300+ PCs labs, 155 Mbps WiFi, ICT classrooms, NPTEL videos. Also ECE 180, Civil 60, Mechanical, EEE. AP EAPCET. Fee Rs.43k/year</p></div>
-<div class="card searchable"><span class="badge">MBA 180 SEATS - AUTONOMOUS</span><h3>Master of Business Administration - 2 Years</h3><p>Autonomous Curriculum - Finance, Marketing, HR, Business Analytics, Logistics & Supply Chain, Health Management. AP ICET. Fee Rs.35k/year. 180 intake as per AICTE.</p></div>
-<div class="card searchable"><span class="badge">MCA 180 SEATS - AUTONOMOUS</span><h3>Master of Computer Applications - 2 Years</h3><p>Autonomous - Full Stack, Cloud, AI, Python, Java. Hackathons, industry projects. AP ICET. Fee Rs.35k/year. 180 intake.</p></div>
-<div class="card searchable"><span class="badge">M.TECH 6 SPECIALIZATIONS - AUTONOMOUS</span><h3>Master of Technology - 2 Years</h3><p>Autonomous - CSE 18, VLSI 18, Power Systems 18, Thermal 18, Structural 36, CAD/CAM 18. GATE / AP PGECET. Fee Rs.50k/year</p></div>
-<div class="card searchable"><span class="badge">BBA 60 | BCA 60 - AUTONOMOUS</span><h3>BBA & BCA Degree - 3 Years</h3><p>Autonomous Degree Programs - BBA Management, BCA Software Development. OAMDC Counselling. Fee Rs.25k/year. Best for management & IT career.</p></div>
-<div class="card searchable"><span class="badge">DIPLOMA AFTER 10TH</span><h3>Polytechnic Diploma - 3 Years</h3><p>ECE 120, Mechanical 120, Electrical 60. Lateral entry to B.Tech 2nd year under Autonomous. AP POLYCET. Fee Rs.25k/year</p></div>
+<div class="card searchable"><span class="badge">B.TECH AUTONOMOUS - 4 YEARS</span><h3>CSE 240 + AI and ML 60, Data Science 60, Cyber Security 60</h3><p>Flagship Autonomous branch. 300+ PCs labs, 155 Mbps WiFi, ICT classrooms, NPTEL videos. Also ECE 180, Civil 60, Mechanical, EEE. AP EAPCET. Fee Rs.43,000 per year.</p></div>
+<div class="card searchable"><span class="badge">MBA 180 SEATS - AUTONOMOUS</span><h3>Master of Business Administration - 2 Years</h3><p>Autonomous - Finance, Marketing, HR, Business Analytics, Logistics and Supply Chain, Health Management. AP ICET. 180 intake as per AICTE. Fee Rs.35,000 per year.</p></div>
+<div class="card searchable"><span class="badge">MCA 180 SEATS - AUTONOMOUS</span><h3>Master of Computer Applications - 2 Years</h3><p>Autonomous - Full Stack, Cloud, AI, Python, Java. Hackathons, industry projects. AP ICET. 180 intake. Fee Rs.35,000 per year.</p></div>
+<div class="card searchable"><span class="badge">M.TECH 6 SPECIALIZATIONS</span><h3>M.Tech - CSE 18, VLSI 18, Power Systems 18, Thermal 18, Structural 36, CAD CAM 18</h3><p>Autonomous PG. GATE and PGECET. Fee Rs.50,000 per year. Advanced research labs.</p></div>
+<div class="card searchable"><span class="badge">BBA 60 | BCA 60 - AUTONOMOUS</span><h3>BBA and BCA Degree - 3 Years</h3><p>Autonomous Degree Programs - BBA Management, BCA Software Development. OAMDC Counselling. Fee Rs.25,000 per year.</p></div>
+<div class="card searchable"><span class="badge">DIPLOMA 300 SEATS</span><h3>Polytechnic Diploma - After 10th - 3 Years</h3><p>ECE 120, Mechanical 120, Electrical 60. Lateral entry to B.Tech 2nd year. AP POLYCET. Fee Rs.25,000 per year.</p></div>
 </div>
-<div class="no-res" id="noRes">No results found. Try MBA, MCA, Autonomous, Canteen, Hostel, Library, Sports...</div>
-
-<div class="section-title" id="campus"><h2>Campus Life & Facilities</h2><p>Autonomous Campus - 2 Canteens, Cafeteria, Hostel, Library, Gym, Sports - 20 Acres Green Campus</p></div>
-<div class="grid" style="background:#080e26;padding:60px 6%">
-<div class="card searchable"><span class="badge">HOSTEL</span><h3>Boys & Girls Hostel - Autonomous Campus</h3><p>Separate hostels inside 20 acre campus. Rs.35,000/year with food. Free WiFi, 24/7 security, warden, doctor on call, bakery, laundry, TV room.</p></div>
-<div class="card searchable"><span class="badge">2 CANTEENS + CAFETERIA</span><h3>Cafeteria & Food Courts</h3><p>Two spacious canteens + food court - hygienic veg & non-veg, snacks, juices, bakery items. Seating 200+. Favorite hangout for Autonomous students.</p></div>
-<div class="card searchable"><span class="badge">LIBRARY 16,970 BOOKS</span><h3>Central & Digital Library</h3><p>AC library with 16,970+ books, 2680 titles, 28 national journals, e-journals, DELNET, NPTEL videos. Capacity 300 students. 155 Mbps internet. ICT enabled classrooms.</p></div>
-<div class="card searchable"><span class="badge">AUDITORIUM 264 SEATS</span><h3>Auditorium & Seminar Halls</h3><p>264 AC seating auditorium with 17000W sound system, projector, stage lighting. For Cultural Fest, Pongal Celebrations, Freshers Party, Farewell under Autonomous.</p></div>
-<div class="card searchable"><span class="badge">SPORTS & GYM</span><h3>Sports Complex & Gym</h3><p>Cricket ground, football field, basketball court, volleyball, kabaddi, shuttle badminton, chess, carrom. Annual Sports Day, gym with professional trainers.</p></div>
-<div class="card searchable"><span class="badge">LABS & TRANSPORT</span><h3>Advanced Labs & Transport</h3><p>CSE labs with 300+ PCs, ECE, EEE, Mechanical workshops, Civil labs. Fleet of college buses covering entire Vizag city. Medical centre, parking, ATM, general store.</p></div>
 </div>
 
-<div class="section-title" id="placements"><h2>Placements 2024 - Autonomous</h2><p>Training & Placement Cell - Autonomous Institution Since 2008</p></div>
-<div class="stats"><div class="stat"><h3>6.5 LPA</h3><p>HIGHEST PACKAGE</p></div><div class="stat"><h3>2.2 LPA</h3><p>AVERAGE</p></div><div class="stat"><h3>253+</h3><p>STUDENTS PLACED</p></div><div class="stat"><h3>75+</h3><p>COMPANIES</p></div></div>
+<div class="section" id="events">
+<div class="section-header"><h2>Upcoming Events 2025-26</h2><p>AURA FEST, CODE CARNIVAL, Sankranthi, Pongal, Freshers, Sports Day, Hostel Day</p></div>
 <div class="grid">
-<div class="card"><h3>Top Recruiters - Autonomous Batch</h3><p>TCS, Wipro, Infosys, Tech Mahindra, HCL, Hexaware, Allsec Technologies, Daikin, Kodnest, QSpiders, Apollo Tyres and 60+ more recruit from Autonomous campus.</p></div>
-<div class="card"><h3>Training Programs</h3><p>CRT training, aptitude, communication skills, technical workshops, mock interviews, resume building, English communication, entrepreneurship camps, NPTEL learning.</p></div>
-<div class="card"><h3>Cultural & Events - Autonomous</h3><p>Cultural Fest & Pongal Celebrations, Freshers Party, Farewell, Sports Day, Hostel Day, Bus Feast, Traditional Day, Tech Fest, Hackathons, PRAVAH.</p></div>
+<div class="card searchable"><span class="badge">AURA FEST 2024-25</span><h3>AURA FEST - Arts, Culture and Music Festival</h3><p>Central Quad. Flashmob, Dance Battle, Band Performance, Fashion Show, DJ Night, Celebrity Night. Biggest cultural festival at Narava campus with 2000+ students.</p></div>
+<div class="card searchable"><span class="badge">CODE CARNIVAL - 48HR HACKATHON</span><h3>CODE CARNIVAL - CSE Department Hackathon</h3><p>Build, Innovate, Compete, Win. 48 Hour Hackathon, Project Expo, Paper Presentation, Coding Contest, Prizes Worth Rs.50,000. Organized by CSE, AI and ML, Data Science departments.</p></div>
+<div class="card searchable"><span class="badge">CAMPUS FESTIVALS</span><h3>Sankranthi Sambaralu, Pongal, Freshers, Farewell</h3><p>Sankranthi Sambaralu with traditional dress, Pongal Celebrations, Freshers Party 2025, Farewell Day, Traditional Day, Hostel Day, Bus Feast, Sports Day, Alumni Meet, NSS Activities, Entrepreneurship Camps.</p></div>
+</div>
 </div>
 
-<div class="section-title" id="videos"><h2>Official VIET Autonomous Videos</h2><p>Real campus life from VIET Official YouTube - Autonomous Institution</p></div>
+<div class="section" id="campus" style="background:#080e26">
+<div class="section-header"><h2>Campus 360° - Life at Narava</h2><p>2 Canteens, Cafeteria, Hostel, Library 16,970 Books, Gym, Sports - 20 Acres Green Campus</p></div>
+<div class="grid">
+<div class="card searchable"><span class="badge">HOSTEL</span><h3>Boys and Girls Hostel - Autonomous Campus</h3><p>Separate hostels inside 20 acre campus. Rs.35,000 per year with food. Free WiFi, 24 by 7 security, warden, doctor on call, bakery, laundry, TV room, study rooms.</p></div>
+<div class="card searchable"><span class="badge">2 CANTEENS + CAFETERIA</span><h3>Cafeteria and Food Courts</h3><p>Two spacious canteens and cafeteria - hygienic veg and non-veg, snacks, juices, bakery items, tea, coffee. Seating 200 plus. Favorite hangout for Autonomous students.</p></div>
+<div class="card searchable"><span class="badge">LIBRARY 16,970 BOOKS</span><h3>Central and Digital Library - Autonomous</h3><p>AC library with 16,970 books, 2680 titles, 28 national journals, e-journals, DELNET, NPTEL videos, digital library, reading room capacity 300, 155 Mbps WiFi, ICT enabled classrooms.</p></div>
+<div class="card searchable"><span class="badge">AUDITORIUM 264 SEATS</span><h3>Auditorium and Seminar Halls</h3><p>264 AC seating auditorium with 17000W sound system, projector, stage lighting, green room. For AURA FEST, CODE CARNIVAL, Pongal, Freshers Party, Farewell under Autonomous.</p></div>
+<div class="card searchable"><span class="badge">SPORTS and GYM</span><h3>Sports Complex and Gym</h3><p>Cricket ground, football field, basketball court, volleyball, kabaddi, shuttle badminton, chess, carrom, table tennis. Annual Sports Day, inter-college tournaments, gym with professional trainers.</p></div>
+<div class="card searchable"><span class="badge">LABS and TRANSPORT</span><h3>Advanced Labs and Buses</h3><p>CSE labs with 300 plus PCs, AI and ML lab, Data Science lab, ECE, EEE, Mechanical workshops, Civil labs. Fleet of college buses covering entire Vizag city. Medical centre, parking, ATM, general store, photocopy centre.</p></div>
+</div>
+</div>
+
+<div class="section" id="placements">
+<div class="section-header"><h2>Placements - Autonomous Batch 2024</h2><p>Training and Placement Cell • Autonomous Institution • Since 2008 • 75 Plus Companies</p></div>
+<div class="grid">
+<div class="card searchable"><span class="badge">6.5 LPA HIGHEST - PLACEMENTS</span><h3>Placements Statistics 2024 - Autonomous</h3><p>Highest 6.5 LPA, Average 2.2 LPA, 253 Plus Students Placed, 75 Plus Companies Visited. Best for CSE, ECE, MBA, MCA. Hyderabad and Vizag job markets.</p></div>
+<div class="card searchable"><span class="badge">TOP RECRUITERS</span><h3>Top Recruiters - Autonomous Campus</h3><p>TCS, Wipro, Infosys, Tech Mahindra, HCL, Hexaware, Allsec Technologies, Daikin, Kodnest, QSpiders, Apollo Tyres, Sutherland, Mphasis, Cognizant and 60 plus more recruit from Autonomous campus.</p></div>
+<div class="card searchable"><span class="badge">TRAINING</span><h3>Training and CRT Programs</h3><p>CRT training, aptitude, reasoning, communication skills, technical workshops, mock interviews, group discussions, resume building, English communication classes, entrepreneurship awareness camps, NPTEL learning, industrial visits.</p></div>
+</div>
+</div>
+
+<div class="section" id="videos" style="background:#080e26">
+<div class="section-header"><h2>Official VIET Autonomous Videos</h2><p>Real campus life from VIET Official YouTube - AURA FEST, CODE CARNIVAL, Campus Tour</p></div>
 <div class="video-grid">
-<div class="vcard"><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen></iframe><div class="vinfo"><h4>VIET Autonomous Official Campus Tour - Narava</h4><p>20 acre autonomous campus, labs, library, hostel, 2 canteens, sports complex</p></div></div>
-<div class="vcard"><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><div class="vinfo"><h4>Cultural Fest & Pongal Celebrations - Autonomous</h4><p>Freshers, Traditional Day, PRAVAH, Code Carnival CSE 2024, Flashmob</p></div></div>
-<div class="vcard"><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen></iframe><div class="vinfo"><h4>Sports Day & Tech Fest Highlights - Autonomous</h4><p>Annual Sports Day, Hostel Day, Bus Feast, Tech Fest, Project Expo</p></div></div>
+<div class="vcard"><iframe src="https://www.youtube.com/embed/oiDlAnVyWH4" allowfullscreen></iframe><div><h4>VIET Autonomous Official Campus Tour - Narava 20 Acres</h4><p>20 acre autonomous campus, labs, library, hostel, 2 canteens, sports complex, auditorium</p></div></div>
+<div class="vcard"><iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe><div><h4>AURA FEST 2024-25 - Arts, Culture and Music Festival</h4><p>Flashmob, Dance Battle, Band, Fashion Show, Cultural Fest, Pongal Celebrations at Narava</p></div></div>
+<div class="vcard"><iframe src="https://www.youtube.com/embed/8fR0yQ0R5Qk" allowfullscreen></iframe><div><h4>CODE CARNIVAL - 48HR Hackathon - CSE Department</h4><p>Build Innovate Compete Win - Project Expo, Paper Presentation, Prizes 50K, Hackathon</p></div></div>
+</div>
 </div>
 
 <footer>
-<b>VIETORA</b> - Luxury Portal for <b>Visakha Institute of Engineering & Technology (Autonomous)</b><br>
-Narava, 88th Division, GVMC, Visakhapatnam - 530027 | Official: www.viet.edu.in | Est. 2008 | AUTONOMOUS | NAAC A Grade | AICTE Approved | ISO Certified | JNTU-GV Affiliated<br>
-All courses, intake, fees, facilities 100% verified from official website & AICTE 2025-26 approval. 20 Acre Green Campus with 24x7 WiFi, ICT Classrooms, NPTEL.<br><br>
-© 2026 VIETORA - Made with pride to make our Autonomous college proud
+<b>VIETORA</b> - Official Student Portal for <b>Visakha Institute of Engineering and Technology (Autonomous)</b> - Reimagined Digital Campus<br>
+Narava, 88th Division, GVMC, Visakhapatnam - 530027 | Official Website: www.viet.edu.in | Established 2008 | AUTONOMOUS | NAAC A Grade | AICTE Approved | ISO Certified | JNTU-GV Affiliated<br>
+All courses, intake, fees, facilities 100 percent verified from official website and AICTE 2025-26 approval letter. 20 Acre Green Campus with 24x7 WiFi, ICT Classrooms, NPTEL Videos, 2 Canteens, Hostel, Library 16,970 Books.<br><br>
+© 2026 VIETORA - Where Aspirations Take Flight - Made with pride to make our Autonomous college proud
 </footer>
 
 <script>
+function openSearch(){document.getElementById('searchModal').classList.add('active');document.getElementById('searchInput').focus();doSearch();}
+function closeSearch(){document.getElementById('searchModal').classList.remove('active');}
 function doSearch(){
-let q=document.getElementById('searchBox').value.toLowerCase().trim();
+let q=document.getElementById('searchInput').value.toLowerCase().trim();
 let cards=document.querySelectorAll('.searchable');
-let found=0;
-if(q===""){cards.forEach(c=>c.style.display='');document.getElementById('noRes').style.display='none';return;}
-cards.forEach(c=>{if(c.innerText.toLowerCase().includes(q)){c.style.display='';found++}else{c.style.display='none'}});
-document.getElementById('noRes').style.display=found===0?'block':'none';
+let results=document.getElementById('searchResults');
+results.innerHTML='';
+if(q===""){
+cards.forEach(c=>c.style.display='');
+results.innerHTML='<div style="padding:20px;text-align:center;color:#64748b;font-size:13px">Type MBA, MCA, BBA, Hostel, Canteen, AURA FEST, CODE CARNIVAL, Events, Placements...</div>';
+return;
 }
+let found=0;
+cards.forEach(c=>{
+let txt=c.innerText.toLowerCase();
+let title=c.querySelector('h3')?c.querySelector('h3').innerText:'';
+if(txt.includes(q)){
+c.style.display='';
+found++;
+let div=document.createElement('div');
+div.className='search-item';
+div.innerHTML='<h4>'+title+'</h4><p>'+c.innerText.substring(0,100)+'...</p>';
+div.onclick=function(){closeSearch();c.scrollIntoView({behavior:'smooth',block:'center'});c.style.outline='2px solid #60a5fa';setTimeout(()=>c.style.outline='none',2000);};
+results.appendChild(div);
+} else {
+c.style.display='none';
+}
+});
+if(found===0){
+results.innerHTML='<div style="padding:20px;text-align:center;color:#f87171;font-size:13px">No results found. Try MBA, MCA, BBA, Hostel, Canteen, AURA FEST, CODE CARNIVAL...</div>';
+} else {
+if(document.getElementById('searchModal').classList.contains('active')===false){
+document.getElementById('academics').scrollIntoView({behavior:'smooth'});
+}
+}
+}
+doSearch();
 </script>
 </body>
 </html>
